@@ -1,6 +1,6 @@
 {
   "name": "fomantic-ui-react",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-alpha.1",
   "description": "Fomantic-UI React -- A React Component Library.",
   "main": "lib/index.tsx",
   "scripts": {
