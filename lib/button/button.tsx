@@ -1,5 +1,5 @@
 import React from 'react';
-import '.../less/definitions/globals/reset.less';
+import '../less/definitions/globals/reset.less';
 import '../less/definitions/globals/site.less';
 import '../less/definitions/elements/button.less';
 
