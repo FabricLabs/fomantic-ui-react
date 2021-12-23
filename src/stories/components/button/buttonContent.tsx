@@ -24,7 +24,15 @@ export type ButtonContentProps = {
   children?: ReactNode;
 };
 
-export const ButtonContent = ({ as = 'div', className, content, hidden, visible, children, ...props }: ButtonContentProps) => {
+export const ButtonContent = ({
+  as = 'div',
+  className,
+  content,
+  hidden,
+  visible,
+  children,
+  ...props
+}: ButtonContentProps) => {
   const classNames = ['content'];
 
   if (hidden) {
@@ -39,5 +47,9 @@ export const ButtonContent = ({ as = 'div', className, content, hidden, visible,
     classNames.push(className);
   }
 
-  return React.createElement(as, { className: classNames.join(' '), ...props }, content ?? children);
+  return React.createElement(
+    as,
+    { className: classNames.join(' '), ...props },
+    content ?? children
+  );
 };

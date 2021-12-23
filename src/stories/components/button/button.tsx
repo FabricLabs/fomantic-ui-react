@@ -1,8 +1,6 @@
 import React, { ReactNode } from 'react';
 import { ButtonContent } from './buttonContent';
 import { Icon } from '../../components';
-import '../less/definitions/globals/reset.less';
-import '../less/definitions/globals/site.less';
 import '../less/definitions/elements/button.less';
 
 export type ButtonProps = {
@@ -38,40 +36,40 @@ export type ButtonProps = {
    * 按钮尺寸
    */
   size?:
-  | 'mini'
-  | 'tiny'
-  | 'small'
-  | 'medium'
-  | 'large'
-  | 'big'
-  | 'huge'
-  | 'massive';
+    | 'mini'
+    | 'tiny'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'big'
+    | 'huge'
+    | 'massive';
   /**
    * 颜色
    */
   color?:
-  | 'primary'
-  | 'secondary'
-  | 'red'
-  | 'orange'
-  | 'yellow'
-  | 'olive'
-  | 'green'
-  | 'teal'
-  | 'blue'
-  | 'violet'
-  | 'purple'
-  | 'pink'
-  | 'brown'
-  | 'grey'
-  | 'black'
-  | 'facebook'
-  | 'google plus'
-  | 'instagram'
-  | 'linkedin'
-  | 'twitter'
-  | 'vk'
-  | 'youtube';
+    | 'primary'
+    | 'secondary'
+    | 'red'
+    | 'orange'
+    | 'yellow'
+    | 'olive'
+    | 'green'
+    | 'teal'
+    | 'blue'
+    | 'violet'
+    | 'purple'
+    | 'pink'
+    | 'brown'
+    | 'grey'
+    | 'black'
+    | 'facebook'
+    | 'google plus'
+    | 'instagram'
+    | 'linkedin'
+    | 'twitter'
+    | 'vk'
+    | 'youtube';
   /**
    * 图标
    */
@@ -127,7 +125,7 @@ export const Button = ({
   if (icon) {
     classNames.push('icon');
     if (typeof icon === 'string') {
-      children = <Icon name={icon} />
+      children = <Icon name={icon} />;
     }
   }
 

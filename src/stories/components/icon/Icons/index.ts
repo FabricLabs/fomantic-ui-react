@@ -2065,4 +2065,7 @@ export const COMPONENT_CONTEXT_SPECIFIC_ICONS = [
   'left dropdown', // nested dropdown menu direction icon
 ];
 
-export const ALL_ICONS_IN_ALL_CONTEXTS = _.uniq([...ICONS_AND_ALIASES, ...COMPONENT_CONTEXT_SPECIFIC_ICONS]);
+export const ALL_ICONS_IN_ALL_CONTEXTS = _.uniq([
+  ...ICONS_AND_ALIASES,
+  ...COMPONENT_CONTEXT_SPECIFIC_ICONS,
+]);

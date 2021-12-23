@@ -16,12 +16,22 @@ export type LabelDetailProps = {
   children?: ReactNode;
 };
 
-export const LabelDetail = ({ as = 'div', className, content, children, ...props }: LabelDetailProps) => {
+export const LabelDetail = ({
+  as = 'div',
+  className,
+  content,
+  children,
+  ...props
+}: LabelDetailProps) => {
   const classNames = ['detail'];
 
   if (className) {
     classNames.push(className);
   }
 
-  return React.createElement(as, { className: classNames.join(' '), ...props }, content || children);
+  return React.createElement(
+    as,
+    { className: classNames.join(' '), ...props },
+    content || children
+  );
 };

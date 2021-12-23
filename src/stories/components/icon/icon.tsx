@@ -1,6 +1,4 @@
 import React from 'react';
-import '../less/definitions/globals/reset.less';
-import '../less/definitions/globals/site.less';
 import '../less/definitions/elements/icon.less';
 import '../less/definitions/elements/loader.less';
 
@@ -64,10 +62,42 @@ export type IconProps = {
   /**
    * 颜色
    */
-  color?: 'primary' | 'secondary' | 'red' | 'orange' | 'yellow' | 'olive' | 'green' | 'teal' | 'blue' | 'violet' | 'purple' | 'pink' | 'brown' | 'grey' | 'black';
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'red'
+    | 'orange'
+    | 'yellow'
+    | 'olive'
+    | 'green'
+    | 'teal'
+    | 'blue'
+    | 'violet'
+    | 'purple'
+    | 'pink'
+    | 'brown'
+    | 'grey'
+    | 'black';
 };
 
-export const Icon = ({ as = 'i', className, name, disabled, loading, fitted, link, flipped, rotated, circular, bordered, colored, inverted, size, color, ...props }: IconProps) => {
+export const Icon = ({
+  as = 'i',
+  className,
+  name,
+  disabled,
+  loading,
+  fitted,
+  link,
+  flipped,
+  rotated,
+  circular,
+  bordered,
+  colored,
+  inverted,
+  size,
+  color,
+  ...props
+}: IconProps) => {
   const classNames = ['icon', name];
   if (size) {
     classNames.push(size);
