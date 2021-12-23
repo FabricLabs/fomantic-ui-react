@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <Button {...args}>{args.label ? '' : 'Button'}</Button>
+  <Button {...args}>{args.content ? '' : 'Button'}</Button>
 );
 
 export const Basic = Template.bind({});
@@ -16,6 +16,33 @@ export const Basic = Template.bind({});
 Basic.storyName = '基本使用';
 
 Basic.args = {};
+
+const TemplateAnimated: ComponentStory<typeof Button> = (args) => (
+  <>
+    <Button {...args} animated>
+      <Button.Content visible content="Next" />
+      <Button.Content hidden>
+        <Icon name="arrow right" />
+      </Button.Content>
+    </Button>
+    <Button {...args} animated="vertical">
+      <Button.Content hidden>Shop</Button.Content>
+      <Button.Content visible>
+        <Icon name="shop" />
+      </Button.Content>
+    </Button>
+    <Button {...args} animated="fade">
+      <Button.Content visible>Sign-up for a Pro account</Button.Content>
+      <Button.Content hidden>$12.99 a month</Button.Content>
+    </Button>
+  </>
+);
+
+export const Animated = TemplateAnimated.bind({});
+
+Animated.storyName = '动画';
+
+Animated.args = {};
 
 const TemplateSize: ComponentStory<typeof Button> = (args) => (
   <>

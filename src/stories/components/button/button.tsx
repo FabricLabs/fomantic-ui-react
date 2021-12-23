@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { ButtonContent } from './buttonContent';
 import { Icon } from '../../components';
 import '../less/definitions/globals/reset.less';
 import '../less/definitions/globals/site.less';
@@ -8,7 +9,7 @@ export type ButtonProps = {
   /**
    * 按钮内容
    */
-  label?: string;
+  content?: string;
   /**
    * 标签名称
    */
@@ -25,6 +26,10 @@ export type ButtonProps = {
    * 基本样式
    */
   basic?: boolean;
+  /**
+   * 动画
+   */
+  animated?: boolean | 'fade' | 'vertical';
   /**
    * class 属性
    */
@@ -84,9 +89,10 @@ export const Button = ({
   color,
   compact,
   disabled,
+  animated,
   basic,
   icon,
-  label,
+  content,
   children,
   ...props
 }: ButtonProps) => {
@@ -94,33 +100,50 @@ export const Button = ({
   if (basic) {
     classNames.push('basic');
   }
+
   if (compact) {
     classNames.push('compact');
   }
+
   if (color) {
     classNames.push(color);
   }
+
   if (size) {
     classNames.push(size);
   }
+
   if (disabled) {
     classNames.push('disabled');
   }
+
+  if (animated) {
+    classNames.push('animated');
+    if (typeof animated === 'string') {
+      classNames.push(animated);
+    }
+  }
+
   if (icon) {
     classNames.push('icon');
     if (typeof icon === 'string') {
       children = <Icon name={icon} />
     }
   }
+
   if (className) {
     classNames.push(className);
   }
+
   if (as === '') {
     as = 'button';
   }
+
   return React.createElement(
     as,
     { className: classNames.join(' '), ...props },
-    label ?? children
+    children || content
   );
 };
+
+Button.Content = ButtonContent;
