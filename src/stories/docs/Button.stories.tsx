@@ -3,19 +3,21 @@ import { Button, Icon } from '../components';
 
 export default {
   id: 'components/button',
-  title: '组件/按钮',
-  component: Button,
+  title: '组件/Button (按钮)',
+  component: Button
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <Button {...args}>{args.content ? '' : 'Button'}</Button>
+  <Button {...args} />
 );
 
 export const Basic = Template.bind({});
 
-Basic.storyName = '基本使用';
+Basic.storyName = '基本用法';
 
-Basic.args = {};
+Basic.args = {
+  children: 'button'
+};
 
 const TemplateAnimated: ComponentStory<typeof Button> = (args) => (
   <>

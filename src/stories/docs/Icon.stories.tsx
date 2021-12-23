@@ -3,7 +3,7 @@ import { Icon } from '../components';
 
 export default {
   id: 'components/icon',
-  title: '组件/图标',
+  title: '组件/Icon (图标)',
   component: Icon,
 } as ComponentMeta<typeof Icon>;
 
@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Icon> = (args) => (
 
 export const Basic = Template.bind({});
 
-Basic.storyName = '基本使用';
+Basic.storyName = '基本用法';
 
 Basic.args = {
   name: 'users'
