@@ -15,3 +15,6 @@ export { default as Container } from './container';
 
 export type { EmojiProps } from './emoji';
 export { default as Emoji } from './emoji';
+
+export type { FlagProps } from './flag';
+export { default as Flag } from './flag';
