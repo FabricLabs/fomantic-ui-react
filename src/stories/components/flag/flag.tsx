@@ -1,4 +1,3 @@
-import React from 'react';
 import '../less/definitions/elements/flag.less';
 
 export type FlagProps = {

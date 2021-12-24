@@ -18,3 +18,6 @@ export { default as Emoji } from './emoji';
 
 export type { FlagProps } from './flag';
 export { default as Flag } from './flag';
+
+export type { HeaderProps } from './header';
+export { default as Header } from './header';
