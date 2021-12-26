@@ -1,7 +1,5 @@
 ## Button 按钮
 
-Demo:
-
 ```jsx
 import React from 'react';
 import { Button } from 'fomantic-ui-react';
