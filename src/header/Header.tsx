@@ -1,5 +1,7 @@
 import React from 'react';
 import { HeaderProps } from './type';
+import HeaderContent from './HeaderContent';
+import HeaderSub from './HeaderSub';
 
 const Header = ({
   as = 'div',
@@ -81,5 +83,7 @@ const Header = ({
 };
 
 Header.displayName = 'Header';
+Header.Content = HeaderContent;
+Header.Sub = HeaderSub;
 
 export default Header;

@@ -120,10 +120,12 @@ export default () => (
 );
 ```
 
-## Button API
+## API
+
+### Button
 
 <API src="../../src/button/Button.tsx" hideTitle></API>
 
-## Button.Content API
+### Button.Content
 
 <API src="../../src/button/ButtonContent.tsx" hideTitle></API>

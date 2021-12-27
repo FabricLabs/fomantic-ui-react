@@ -77,3 +77,43 @@ export interface HeaderProps {
    */
   children?: FNode;
 }
+
+export interface HeaderContentProps {
+  /**
+   * 标签名称
+   * @default div
+   */
+  as?: string;
+  /**
+   * class 属性
+   */
+  className?: string;
+  /**
+   * 内容
+   */
+  content?: string;
+  /**
+   * 内容，同 content
+   */
+  children?: FNode;
+}
+
+export interface HeaderSubProps {
+  /**
+   * 标签名称
+   * @default div
+   */
+  as?: string;
+  /**
+   * class 属性
+   */
+  className?: string;
+  /**
+   * 内容
+   */
+  content?: string;
+  /**
+   * 内容，同 content
+   */
+  children?: FNode;
+}
