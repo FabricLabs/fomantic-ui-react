@@ -15,3 +15,5 @@ export * from './header';
 export * from './icon';
 
 export * from './label';
+
+export * from './image';
