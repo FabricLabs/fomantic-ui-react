@@ -1,13 +1,21 @@
 /**
  * usage: npm run init <component-name>
- *
  */
 const fs = require('fs');
 const path = require('path');
+const inquirer = require('inquirer');
 const _ = require('lodash');
 const config = require('./config');
 
 const cwdPath = process.cwd();
+
+const questions = [
+  {
+    type: 'input',
+    name: 'componentInput',
+    message: '组件名称：',
+  },
+];
 
 function createFile(path, data = '', desc) {
   fs.writeFile(path, data, (err) => {
@@ -85,12 +93,22 @@ function insertComponentToIndex(component, indexPath) {
   });
 }
 
-function init() {
-  const [component] = process.argv.slice(2);
+function generate(component) {
   const indexPath = path.resolve(cwdPath, 'src/index.ts');
   const toBeCreatedFiles = config.getToBeCreatedFiles(component, getPascalCase(component));
   addComponent(toBeCreatedFiles, component);
   insertComponentToIndex(component, indexPath);
+}
+
+function init() {
+  const [component] = process.argv.slice(2);
+  if (component === undefined) {
+    inquirer.prompt(questions).then((answers) => {
+      generate(answers.componentInput);
+    });
+  } else {
+    generate(component);
+  }
 }
 
 init();
