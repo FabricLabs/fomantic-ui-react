@@ -17,3 +17,5 @@ export * from './icon';
 export * from './label';
 
 export * from './image';
+
+export * from './input';
