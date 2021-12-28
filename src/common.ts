@@ -39,3 +39,23 @@ export interface KeysType {
   value?: string;
   label?: string;
 }
+
+export interface CommonProps {
+  /**
+   * 标签名称
+   * @default div
+   */
+  as?: string;
+  /**
+   * class 属性
+   */
+  className?: string;
+  /**
+   * 标签内容
+   */
+  content?: FNode;
+  /**
+   * 内容，同 content
+   */
+  children?: FNode;
+}

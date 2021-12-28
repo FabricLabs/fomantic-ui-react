@@ -13,7 +13,7 @@ export interface <%= PascalCaseComponent %>Props {
   /**
    * 标签内容
    */
-  content?: string;
+  content?: FNode;
   /**
    * 内容，同 content
    */
