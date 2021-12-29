@@ -2,13 +2,17 @@ import React from 'react';
 import DimmerDimmable from './DimmerDimmable';
 import { DimmerProps } from './type';
 
-const Dimmer = ({ as = 'div', className, active, content, children, ...props }: DimmerProps) => {
+const Dimmer = ({ as = 'div', className, active, inverted, content, children, ...props }: DimmerProps) => {
   const classNames = ['ui', 'dimmer'];
 
   if (active) {
     classNames.push('active');
   } else {
     classNames.push('hidden');
+  }
+
+  if (inverted) {
+    classNames.push('inverted');
   }
 
   if (className) {
