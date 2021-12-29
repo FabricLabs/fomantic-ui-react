@@ -27,3 +27,5 @@ export * from './segment';
 export * from './dimmer';
 
 export * from './loader';
+
+export * from './placeholder';
