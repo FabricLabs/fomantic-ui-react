@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "fomantic-ui-react",
   "version": "0.0.1-alpha.2",
   "description": "Fomantic-UI React -- A React Component Library.",
@@ -13,10 +12,17 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
-    "init": "node script/init-component"
+    "init": "node script/init-component",
+    "serve": "serve docs-dist"
   },
   "module": "es/index.js",
   "typings": "es/index.d.ts",
+  "files": [
+    "es",
+    "es/index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -57,11 +63,17 @@
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
+    "serve": "^13.0.2",
     "yorkie": "^2.0.0"
+  },
+  "peerDependencies": {
+    "hoist-non-react-statics": "^3.3.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/fireloong/fomantic-ui-react.git"
+    "url": "https://gitee.com/fireloong/fomantic-ui-react.git",
+    "branch": "dumi",
+    "platform": "gitee"
   },
   "keywords": [
     "react",

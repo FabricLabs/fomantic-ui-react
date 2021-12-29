@@ -23,3 +23,5 @@ export * from './input';
 export * from './list';
 
 export * from './segment';
+
+export * from './dimmer';
