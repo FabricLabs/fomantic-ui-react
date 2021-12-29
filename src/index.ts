@@ -29,3 +29,5 @@ export * from './dimmer';
 export * from './loader';
 
 export * from './placeholder';
+
+export * from './rail';

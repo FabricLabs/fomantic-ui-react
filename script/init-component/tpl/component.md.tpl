@@ -1,4 +1,4 @@
-## <%= PascalCaseComponent %>
+# <%= PascalCaseComponent %>
 
 ```jsx
 import React from 'react';
