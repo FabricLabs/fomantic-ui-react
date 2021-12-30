@@ -83,20 +83,20 @@ export default () => (
 
 ### Placeholder
 
-<API src="../../src/placeholder/Placeholder.tsx" hideTitle></API>
+<API src="../../../src/placeholder/Placeholder.tsx" hideTitle></API>
 
 ### PlaceholderHeader
 
-<API src="../../src/placeholder/PlaceholderHeader.tsx" hideTitle></API>
+<API src="../../../src/placeholder/PlaceholderHeader.tsx" hideTitle></API>
 
 ### PlaceholderLine
 
-<API src="../../src/placeholder/PlaceholderLine.tsx" hideTitle></API>
+<API src="../../../src/placeholder/PlaceholderLine.tsx" hideTitle></API>
 
 ### PlaceholderImage
 
-<API src="../../src/placeholder/PlaceholderImage.tsx" hideTitle></API>
+<API src="../../../src/placeholder/PlaceholderImage.tsx" hideTitle></API>
 
 ### PlaceholderParagraph
 
-<API src="../../src/placeholder/PlaceholderParagraph.tsx" hideTitle></API>
+<API src="../../../src/placeholder/PlaceholderParagraph.tsx" hideTitle></API>

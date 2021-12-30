@@ -178,8 +178,8 @@ export default () => (
 
 ### Reveal
 
-<API src="../../src/reveal/Reveal.tsx" hideTitle></API>
+<API src="../../../src/reveal/Reveal.tsx" hideTitle></API>
 
 ### RevealContent
 
-<API src="../../src/reveal/RevealContent.tsx" hideTitle></API>
+<API src="../../../src/reveal/RevealContent.tsx" hideTitle></API>

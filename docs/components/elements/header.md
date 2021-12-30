@@ -81,12 +81,12 @@ export default () => (
 
 ### Header
 
-<API src="../../src/header/Header.tsx" hideTitle></API>
+<API src="../../../src/header/Header.tsx" hideTitle></API>
 
 ### HeaderContent
 
-<API src="../../src/header/HeaderContent.tsx" hideTitle></API>
+<API src="../../../src/header/HeaderContent.tsx" hideTitle></API>
 
 ### HeaderSub
 
-<API src="../../src/header/HeaderSub.tsx" hideTitle></API>
+<API src="../../../src/header/HeaderSub.tsx" hideTitle></API>

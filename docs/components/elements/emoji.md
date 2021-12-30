@@ -64,4 +64,4 @@ import { Emoji } from 'fomantic-ui-react';
 export default () => <Emoji name="anguished" link />;
 ```
 
-<API src="../../src/emoji/Emoji.tsx"></API>
+<API src="../../../src/emoji/Emoji.tsx"></API>

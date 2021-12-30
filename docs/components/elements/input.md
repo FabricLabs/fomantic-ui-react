@@ -101,4 +101,4 @@ import { Input } from 'fomantic-ui-react';
 export default () => <Input icon="inverted circular search link" placeholder="Search..." />;
 ```
 
-<API src="../../src/input/Input.tsx"></API>
+<API src="../../../src/input/Input.tsx"></API>

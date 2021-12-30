@@ -66,4 +66,4 @@ export default () => (
 );
 ```
 
-<API src="../../src/text/Text.tsx"></API>
+<API src="../../../src/text/Text.tsx"></API>

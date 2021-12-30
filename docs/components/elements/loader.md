@@ -174,4 +174,4 @@ export default () => (
 );
 ```
 
-<API src="../../src/loader/Loader.tsx"></API>
+<API src="../../../src/loader/Loader.tsx"></API>

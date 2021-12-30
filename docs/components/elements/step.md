@@ -293,20 +293,20 @@ export default () => (
 
 ### **Step**<Badge>API</Badge>
 
-<API src="../../src/step/Step.tsx" hideTitle></API>
+<API src="../../../src/step/Step.tsx" hideTitle></API>
 
 ### **StepGroup**<Badge>API</Badge>
 
-<API src="../../src/step/StepGroup.tsx" hideTitle></API>
+<API src="../../../src/step/StepGroup.tsx" hideTitle></API>
 
 ### **StepContent**<Badge>API</Badge>
 
-<API src="../../src/step/StepContent.tsx" hideTitle></API>
+<API src="../../../src/step/StepContent.tsx" hideTitle></API>
 
 ### **StepTitle**<Badge>API</Badge>
 
-<API src="../../src/step/StepTitle.tsx" hideTitle></API>
+<API src="../../../src/step/StepTitle.tsx" hideTitle></API>
 
 ### **StepDescription**<Badge>API</Badge>
 
-<API src="../../src/step/StepDescription.tsx" hideTitle></API>
+<API src="../../../src/step/StepDescription.tsx" hideTitle></API>

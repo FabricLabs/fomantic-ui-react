@@ -1,3 +1,9 @@
+---
+group:
+  path: /components/elements
+  title: 元素
+---
+
 ## Button 按钮
 
 ```jsx
@@ -124,8 +130,8 @@ export default () => (
 
 ### Button
 
-<API src="../../src/button/Button.tsx" hideTitle></API>
+<API src="../../../src/button/Button.tsx" hideTitle></API>
 
 ### Button.Content
 
-<API src="../../src/button/ButtonContent.tsx" hideTitle></API>
+<API src="../../../src/button/ButtonContent.tsx" hideTitle></API>

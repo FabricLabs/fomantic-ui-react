@@ -203,4 +203,4 @@ export default () => (
 );
 ```
 
-<API src="../../src/rail/Rail.tsx"></API>
+<API src="../../../src/rail/Rail.tsx"></API>

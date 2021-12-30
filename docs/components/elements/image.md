@@ -127,4 +127,4 @@ import { Image } from 'fomantic-ui-react';
 export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="small" centered />;
 ```
 
-<API src="../../src/image/Image.tsx"></API>
+<API src="../../../src/image/Image.tsx"></API>
