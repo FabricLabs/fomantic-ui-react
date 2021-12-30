@@ -35,3 +35,5 @@ export * from './rail';
 export * from './reveal';
 
 export * from './step';
+
+export * from './text';
