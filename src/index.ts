@@ -31,3 +31,5 @@ export * from './loader';
 export * from './placeholder';
 
 export * from './rail';
+
+export * from './reveal';

@@ -31,9 +31,9 @@ export default ({ identifier, export: expt }: IApiComponentProps) => {
           <thead>
             <tr>
               <th>{texts.name}</th>
-              <th>{texts.description}</th>
+              <th style={{ minWidth: '10rem' }}>{texts.description}</th>
               <th>{texts.type}</th>
-              <th>{texts.default}</th>
+              <th style={{ minWidth: '7rem' }}>{texts.default}</th>
             </tr>
           </thead>
           <tbody>
