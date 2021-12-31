@@ -41,3 +41,5 @@ export * from './text';
 export * from './breadcrumb';
 
 export * from './form';
+
+export * from './grid';

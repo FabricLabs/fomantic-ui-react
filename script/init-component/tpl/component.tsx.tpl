@@ -1,4 +1,4 @@
-import React from 'react';
+import { createElement } from 'react';
 import { <%= PascalCaseComponent %>Props } from './type';
 
 const <%= PascalCaseComponent %> = ({ as = 'div', className, children, ...props }: <%= PascalCaseComponent %>Props) => {
@@ -8,7 +8,7 @@ const <%= PascalCaseComponent %> = ({ as = 'div', className, children, ...props 
     classNames.push(className);
   }
 
-  return React.createElement(as, { className: classNames.join(' '), ...props }, children);
+  return createElement(as, { className: classNames.join(' '), ...props }, children);
 };
 
 <%= PascalCaseComponent %>.displayName = '<%= PascalCaseComponent %>';
