@@ -1,1 +1,1 @@
-import '../../_less/definitions/elements/<%= component %>.less';
+import '../../_less/definitions/<%= group %>s/<%= component %>.less';

@@ -1,4 +1,4 @@
-function getToBeCreatedFiles(component, pascalCaseName) {
+function getToBeCreatedFiles(component, pascalCaseName, group) {
   return {
     [`src/${component}`]: {
       // set up source code
@@ -18,7 +18,7 @@ function getToBeCreatedFiles(component, pascalCaseName) {
         },
       ],
     },
-    [`docs/components`]: {
+    [`docs/components/${group}s`]: {
       // set up component document
       desc: 'component document',
       files: [

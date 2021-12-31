@@ -15,6 +15,12 @@ const questions = [
     name: 'componentInput',
     message: '组件名称：',
   },
+  {
+    type: 'list',
+    choices: ['element', 'collection', 'view', 'module', 'behavior', 'addon'],
+    name: 'groupInput',
+    message: '组件所属组：',
+  },
 ];
 
 function createFile(path, data = '', desc) {
@@ -31,19 +37,21 @@ function getPascalCase(name) {
   return _.startCase(_.camelCase(name)).replace(/ /g, '');
 }
 
-function outputFileWithTemplate(item, component, desc, _d) {
+function outputFileWithTemplate(item, component, group, desc, _d) {
   const tplPath = path.resolve(__dirname, `./tpl/${item.template}`);
   let data = fs.readFileSync(tplPath).toString();
   const compiled = _.template(data);
   data = compiled({
     component,
     PascalCaseComponent: getPascalCase(component),
+    group: group,
+    PascalCaseGroup: getPascalCase(group),
   });
   const f = path.resolve(_d, item.file);
   createFile(f, data, desc);
 }
 
-function addComponent(toBeCreatedFiles, component) {
+function addComponent(toBeCreatedFiles, component, group) {
   Object.keys(toBeCreatedFiles).forEach((dir) => {
     const d = path.resolve(cwdPath, dir);
     fs.mkdir(d, { recursive: true }, (err) => {
@@ -57,7 +65,7 @@ function addComponent(toBeCreatedFiles, component) {
       contents.files.forEach((item) => {
         if (typeof item === 'object') {
           if (item.template) {
-            outputFileWithTemplate(item, component, contents.desc, d);
+            outputFileWithTemplate(item, component, group, contents.desc, d);
           }
         } else {
           const f = path.resolve(d, item);
@@ -93,21 +101,23 @@ function insertComponentToIndex(component, indexPath) {
   });
 }
 
-function generate(component) {
+function generate(component, group) {
   const indexPath = path.resolve(cwdPath, 'src/index.ts');
-  const toBeCreatedFiles = config.getToBeCreatedFiles(component, getPascalCase(component));
-  addComponent(toBeCreatedFiles, component);
+  const toBeCreatedFiles = config.getToBeCreatedFiles(component, getPascalCase(component), group);
+  addComponent(toBeCreatedFiles, component, group);
   insertComponentToIndex(component, indexPath);
 }
 
 function init() {
-  const [component] = process.argv.slice(2);
+  const [component, group] = process.argv.slice(2);
+  console.log(component, group);
   if (component === undefined) {
     inquirer.prompt(questions).then((answers) => {
-      generate(answers.componentInput);
+      console.log(answers);
+      generate(answers.componentInput, answers.groupInput);
     });
   } else {
-    generate(component);
+    generate(component, group);
   }
 }
 

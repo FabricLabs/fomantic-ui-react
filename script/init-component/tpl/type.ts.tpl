@@ -1,3 +1,3 @@
-import { CommonProps } from '../common';
+import { <%= PascalCaseGroup %>Props } from '../common';
 
-export interface <%= PascalCaseComponent %>Props extends CommonProps {}
+export interface <%= PascalCaseComponent %>Props extends <%= PascalCaseGroup %>Props {}

@@ -39,3 +39,5 @@ export * from './step';
 export * from './text';
 
 export * from './breadcrumb';
+
+export * from './form';

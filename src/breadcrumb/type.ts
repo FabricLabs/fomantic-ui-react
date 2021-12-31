@@ -24,6 +24,7 @@ export interface BreadcrumbProps extends CollectionProps {
    * 自定义链接函数，和 react-router 配置使用
    */
   // itemRender?: (route: Route, params: object, routes: Array<Route>, paths: Array<string>) => React.ReactNode;
+  // TODO sections?: [{ key: 'home', content: 'Home', link: true,active: true }]
 }
 
 export interface BreadcrumbItemProps extends CollectionProps {
