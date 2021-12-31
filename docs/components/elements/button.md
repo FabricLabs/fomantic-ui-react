@@ -130,8 +130,8 @@ export default () => (
 
 ### Button
 
-<API src="../../../src/button/Button.tsx" hideTitle></API>
+<API src="@/button/Button.tsx" hideTitle></API>
 
 ### Button.Content
 
-<API src="../../../src/button/ButtonContent.tsx" hideTitle></API>
+<API src="@/button/ButtonContent.tsx" hideTitle></API>

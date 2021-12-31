@@ -24,4 +24,4 @@ export default () => (
 );
 ```
 
-<API src="../../../src/icon/index.ts"></API>
+<API src="@/icon/index.ts"></API>

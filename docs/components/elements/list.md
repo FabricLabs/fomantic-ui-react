@@ -337,28 +337,28 @@ export default () => (
 
 ### List
 
-<API src="../../../src/list/List.tsx" hideTitle></API>
+<API src="@/list/List.tsx" hideTitle></API>
 
 ### List.Item
 
-<API src="../../../src/list/ListItem.tsx" hideTitle></API>
+<API src="@/list/ListItem.tsx" hideTitle></API>
 
 ### List.Content
 
-<API src="../../../src/list/ListContent.tsx" hideTitle></API>
+<API src="@/list/ListContent.tsx" hideTitle></API>
 
 ### List.Headert
 
-<API src="../../../src/list/ListHeader.tsx" hideTitle></API>
+<API src="@/list/ListHeader.tsx" hideTitle></API>
 
 ### List.Description
 
-<API src="../../../src/list/ListDescription.tsx" hideTitle></API>
+<API src="@/list/ListDescription.tsx" hideTitle></API>
 
 ### List.Icon
 
-<API src="../../../src/list/ListIcon.tsx" hideTitle></API>
+<API src="@/list/ListIcon.tsx" hideTitle></API>
 
 ### List.List
 
-<API src="../../../src/list/ListList.tsx" hideTitle></API>
+<API src="@/list/ListList.tsx" hideTitle></API>

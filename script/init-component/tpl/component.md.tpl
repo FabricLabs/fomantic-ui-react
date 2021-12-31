@@ -7,4 +7,4 @@ import { <%= PascalCaseComponent %> } from 'fomantic-ui-react';
 export default () => <<%= PascalCaseComponent %> />;
 ```
 
-<API src="../../src/<%= component %>/<%= PascalCaseComponent %>.tsx"></API>
+<API src="@/<%= component %>/<%= PascalCaseComponent %>.tsx"></API>

@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface StepProps extends CommonProps {
+export interface StepProps extends ElementProps {
   /**
    * 激活
    */
@@ -19,7 +19,7 @@ export interface StepProps extends CommonProps {
   link?: boolean;
 }
 
-export interface StepGroupProps extends CommonProps {
+export interface StepGroupProps extends ElementProps {
   /**
    * 序号
    */
@@ -30,8 +30,8 @@ export interface StepGroupProps extends CommonProps {
   vertical?: boolean | 'right';
 }
 
-export interface StepContentProps extends CommonProps {}
+export interface StepContentProps extends ElementProps {}
 
-export interface StepTitleProps extends CommonProps {}
+export interface StepTitleProps extends ElementProps {}
 
-export interface StepDescriptionProps extends CommonProps {}
+export interface StepDescriptionProps extends ElementProps {}

@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface PlaceholderProps extends CommonProps {}
+export interface PlaceholderProps extends ElementProps {}
 
 export interface PlaceholderLineProps {
   /**
@@ -18,7 +18,7 @@ export interface PlaceholderLineProps {
   length?: 'full' | 'very long' | 'long' | 'medium' | 'short' | 'very short';
 }
 
-export interface PlaceholderParagraphProps extends CommonProps {}
+export interface PlaceholderParagraphProps extends ElementProps {}
 
 export interface PlaceholderImageProps {
   /**
@@ -32,7 +32,7 @@ export interface PlaceholderImageProps {
   className?: string;
 }
 
-export interface PlaceholderHeaderProps extends CommonProps {
+export interface PlaceholderHeaderProps extends ElementProps {
   /**
    * 图片
    */

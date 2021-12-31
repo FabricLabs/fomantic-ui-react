@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface SegmentProps extends CommonProps {
+export interface SegmentProps extends ElementProps {
   /**
    * 占位符
    */
@@ -40,9 +40,9 @@ export interface SegmentProps extends CommonProps {
   secondary?: boolean;
 }
 
-export interface SegmentInlineProps extends CommonProps {}
+export interface SegmentInlineProps extends ElementProps {}
 
-export interface SegmentGroupProps extends CommonProps {
+export interface SegmentGroupProps extends ElementProps {
   /**
    * 基础
    */

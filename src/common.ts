@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, CSSProperties, FormEvent } from 'react';
+import { ReactElement, ReactNode, CSSProperties, FormEvent, ElementType } from 'react';
 
 export type FElement = ReactElement | (() => ReactElement);
 
@@ -40,12 +40,12 @@ export interface KeysType {
   label?: string;
 }
 
-export interface CommonProps {
+export interface ElementProps {
   /**
    * 标签名称
    * @default div
    */
-  as?: string;
+  as?: ElementType;
   /**
    * class 属性
    */
@@ -57,5 +57,18 @@ export interface CommonProps {
   /**
    * 内容，同 content
    */
+  children?: FNode;
+}
+
+export interface CollectionProps {
+  /**
+   * 标签名称
+   * @default div
+   */
+  as?: ElementType;
+  /**
+   * class 属性
+   */
+  className?: string;
   children?: FNode;
 }

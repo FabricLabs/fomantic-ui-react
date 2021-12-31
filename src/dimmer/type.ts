@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface DimmerProps extends CommonProps {
+export interface DimmerProps extends ElementProps {
   /**
    * 激活
    */
@@ -11,7 +11,7 @@ export interface DimmerProps extends CommonProps {
   inverted?: boolean;
 }
 
-export interface DimmerDimmableProps extends CommonProps {
+export interface DimmerDimmableProps extends ElementProps {
   /**
    * 激活遮罩
    */

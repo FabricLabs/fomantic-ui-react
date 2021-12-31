@@ -7,4 +7,4 @@ import { Divider } from 'fomantic-ui-react';
 export default () => <Divider />;
 ```
 
-<API src="../../../src/divider/Divider.tsx"></API>
+<API src="@/divider/Divider.tsx"></API>

@@ -1,4 +1,5 @@
 import { defineConfig } from 'dumi';
+import path from 'path';
 
 export default defineConfig({
   title: 'fomantic-ui-react',
@@ -18,4 +19,7 @@ export default defineConfig({
     ['zh-CN', '中文'],
     ['en-US', 'English'],
   ],
+  alias: {
+    '@': path.resolve(__dirname, 'src'),
+  },
 });

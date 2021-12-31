@@ -161,4 +161,4 @@ export default () => (
 );
 ```
 
-<API src="../../../src/segment/Segment.tsx"></API>
+<API src="@/segment/Segment.tsx"></API>

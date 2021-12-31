@@ -79,4 +79,4 @@ export default () => (
 );
 ```
 
-<API src="../../../src/container/Container.tsx"></API>
+<API src="@/container/Container.tsx"></API>

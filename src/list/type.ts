@@ -1,7 +1,7 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 import { FIconProps } from '../icon/type';
 
-export interface ListProps extends CommonProps {
+export interface ListProps extends ElementProps {
   /**
    * 条目列表
    */
@@ -36,7 +36,7 @@ export interface ListProps extends CommonProps {
   link?: boolean;
 }
 
-export interface ListItemProps extends CommonProps {
+export interface ListItemProps extends ElementProps {
   /**
    * 链接地址
    */
@@ -47,11 +47,11 @@ export interface ListItemProps extends CommonProps {
   active?: boolean;
 }
 
-export interface ListContentProps extends CommonProps {}
+export interface ListContentProps extends ElementProps {}
 
-export interface ListHeaderProps extends CommonProps {}
+export interface ListHeaderProps extends ElementProps {}
 
-export interface ListDescriptionProps extends CommonProps {}
+export interface ListDescriptionProps extends ElementProps {}
 
 export interface ListIconProps extends FIconProps {
   /**
@@ -60,4 +60,4 @@ export interface ListIconProps extends FIconProps {
   verticalAlign?: 'top' | 'middle' | 'bottom';
 }
 
-export interface ListListProps extends CommonProps {}
+export interface ListListProps extends ElementProps {}

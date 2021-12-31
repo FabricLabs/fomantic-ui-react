@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface TextProps extends CommonProps {
+export interface TextProps extends ElementProps {
   /**
    * 标签名称
    * @default span

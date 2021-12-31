@@ -21,4 +21,4 @@ export default () => {
 };
 ```
 
-<API src="../../../src/dimmer/Dimmer.tsx"></API>
+<API src="@/dimmer/Dimmer.tsx"></API>

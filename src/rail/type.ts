@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface RailProps extends CommonProps {
+export interface RailProps extends ElementProps {
   /**
    * 位置
    */

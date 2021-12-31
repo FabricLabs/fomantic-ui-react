@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface LoaderProps extends CommonProps {
+export interface LoaderProps extends ElementProps {
   /**
    * 文本
    */

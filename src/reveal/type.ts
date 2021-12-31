@@ -1,6 +1,6 @@
-import { CommonProps } from '../common';
+import { ElementProps } from '../common';
 
-export interface RevealProps extends CommonProps {
+export interface RevealProps extends ElementProps {
   /**
    * 动画类型
    */
@@ -31,7 +31,7 @@ export interface RevealProps extends CommonProps {
   disabled?: boolean;
 }
 
-export interface RevealContentProps extends CommonProps {
+export interface RevealContentProps extends ElementProps {
   /**
    * 交互前可见的内容
    */

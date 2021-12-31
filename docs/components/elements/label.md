@@ -90,8 +90,8 @@ export default () => (
 
 ### Label
 
-<API src="../../../src/label/Label.tsx" hideTitle></API>
+<API src="@/label/Label.tsx" hideTitle></API>
 
 ### Label.Detail
 
-<API src="../../../src/label/LabelDetail.tsx" hideTitle></API>
+<API src="@/label/LabelDetail.tsx" hideTitle></API>
