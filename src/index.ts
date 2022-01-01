@@ -47,3 +47,5 @@ export * from './grid';
 export * from './menu';
 
 export * from './message';
+
+export * from './table';

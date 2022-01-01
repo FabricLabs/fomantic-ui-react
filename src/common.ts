@@ -51,7 +51,7 @@ export interface ElementProps {
    */
   className?: string;
   /**
-   * 标签内容
+   * 内容
    */
   content?: FNode;
   /**
