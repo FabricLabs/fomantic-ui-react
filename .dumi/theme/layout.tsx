@@ -69,6 +69,8 @@ const Layout: React.FC<IRouteComponentProps> = ({ children, location }) => {
   const repoPlatform =
     { github: 'GitHub', gitlab: 'GitLab' }[(repoUrl || '').match(/(github|gitlab)/)?.[1] || 'nothing'] || platform;
 
+  document.documentElement.setAttribute('lang', locale);
+
   return (
     <div
       className="__dumi-default-layout"

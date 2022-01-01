@@ -1,4 +1,4 @@
-export interface FIconProps {
+export interface IconProps {
   /**
    * 标签名称
    * @default i
@@ -75,4 +75,5 @@ export interface FIconProps {
     | 'brown'
     | 'grey'
     | 'black';
+  onClick?: Function;
 }

@@ -45,3 +45,5 @@ export * from './form';
 export * from './grid';
 
 export * from './menu';
+
+export * from './message';
