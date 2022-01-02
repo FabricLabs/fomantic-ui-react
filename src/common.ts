@@ -63,3 +63,5 @@ export interface ElementProps extends CommonProps {
 export interface CollectionProps extends CommonProps {}
 
 export interface ViewProps extends CommonProps {}
+
+export interface ModuleProps extends CommonProps {}

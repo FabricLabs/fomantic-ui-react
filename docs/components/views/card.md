@@ -26,7 +26,7 @@ export default () => (
 
 ```jsx
 import React from 'react';
-import { Card, Image, Icon } from 'fomantic-ui-react';
+import { Card, Image, Icon, Span } from 'fomantic-ui-react';
 
 export default () => (
   <Card>
@@ -36,6 +36,14 @@ export default () => (
       Elliot
     </Card.Content>
     <Image src="/images/image.png" ui={false} wrapped />
+    <Card.Content>
+      <Span floated="right">
+        <Icon name="heart outline" />
+        17 likes
+      </Span>
+      <Icon name="comment" />3 comments
+    </Card.Content>
+    <Card.Content extra>// TODO 输入框</Card.Content>
   </Card>
 );
 ```
@@ -49,3 +57,15 @@ export default () => (
 ### **CardContent**<Badge>API</Badge>
 
 <API src="@/card/CardContent.tsx" hideTitle></API>
+
+### **CardHeader**<Badge>API</Badge>
+
+<API src="@/card/CardHeader.tsx" hideTitle></API>
+
+### **CardMeta**<Badge>API</Badge>
+
+<API src="@/card/CardMeta.tsx" hideTitle></API>
+
+### **CardDescription**<Badge>API</Badge>
+
+<API src="@/card/CardDescription.tsx" hideTitle></API>

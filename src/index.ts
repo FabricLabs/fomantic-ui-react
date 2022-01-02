@@ -57,3 +57,5 @@ export * from './card';
 export * from './span';
 
 export * from './div';
+
+export * from './transition';
