@@ -40,7 +40,7 @@ export interface KeysType {
   label?: string;
 }
 
-export interface ElementProps {
+export interface CommonProps {
   /**
    * 标签名称
    * @default div
@@ -50,25 +50,16 @@ export interface ElementProps {
    * class 属性
    */
   className?: string;
+  children?: FNode;
+}
+
+export interface ElementProps extends CommonProps {
   /**
    * 内容
    */
   content?: FNode;
-  /**
-   * 内容，同 content
-   */
-  children?: FNode;
 }
 
-export interface CollectionProps {
-  /**
-   * 标签名称
-   * @default div
-   */
-  as?: ElementType;
-  /**
-   * class 属性
-   */
-  className?: string;
-  children?: FNode;
-}
+export interface CollectionProps extends CommonProps {}
+
+export interface ViewProps extends CommonProps {}

@@ -49,3 +49,5 @@ export * from './menu';
 export * from './message';
 
 export * from './table';
+
+export * from './ad';
