@@ -51,3 +51,5 @@ export * from './message';
 export * from './table';
 
 export * from './ad';
+
+export * from './card';

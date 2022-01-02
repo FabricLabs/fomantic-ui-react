@@ -16,10 +16,17 @@ const Image = ({
   circular,
   centered,
   verticalAlign,
+  ui = true,
   size,
   ...props
 }: ImageProps) => {
-  const classNames = ['ui', 'image'];
+  const classNames = [];
+
+  if (ui) {
+    classNames.push('ui');
+  }
+
+  classNames.push('image');
 
   if (size) {
     classNames.push(size);

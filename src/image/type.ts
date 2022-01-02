@@ -53,6 +53,11 @@ export interface ImageProps {
    */
   verticalAlign?: 'top' | 'middle' | 'bottom';
   /**
+   * ui
+   *  @default true
+   */
+  ui?: boolean;
+  /**
    * 尺寸
    */
   size?: 'mini' | 'tiny' | 'small' | 'medium' | 'large' | 'big' | 'huge' | 'massive';
