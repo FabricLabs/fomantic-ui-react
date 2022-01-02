@@ -2,6 +2,7 @@
 group:
   path: /components/elements
   title: 元素
+order: 0
 ---
 
 ## Button 按钮
@@ -128,10 +129,10 @@ export default () => (
 
 ## API
 
-### Button
+### **Button**<Badge>API</Badge>
 
 <API src="@/button/Button.tsx" hideTitle></API>
 
-### Button.Content
+### **Button.Content**<Badge>API</Badge>
 
 <API src="@/button/ButtonContent.tsx" hideTitle></API>

@@ -1,4 +1,8 @@
-## Dimmer 遮罩层
+---
+order: 3
+---
+
+# Dimmer 遮罩层
 
 ```jsx
 import React, { useState } from 'react';

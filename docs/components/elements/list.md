@@ -1,4 +1,8 @@
-## List 列表
+---
+order: 10
+---
+
+# List 列表
 
 列表对相关内容进行分组：
 
@@ -335,30 +339,30 @@ export default () => (
 
 ## API
 
-### List
+### **List**<Badge>API</Badge>
 
 <API src="@/list/List.tsx" hideTitle></API>
 
-### List.Item
+### **List.Item**<Badge>API</Badge>
 
 <API src="@/list/ListItem.tsx" hideTitle></API>
 
-### List.Content
+### **List.Content**<Badge>API</Badge>
 
 <API src="@/list/ListContent.tsx" hideTitle></API>
 
-### List.Headert
+### **List.Headert**<Badge>API</Badge>
 
 <API src="@/list/ListHeader.tsx" hideTitle></API>
 
-### List.Description
+### **List.Description**<Badge>API</Badge>
 
 <API src="@/list/ListDescription.tsx" hideTitle></API>
 
-### List.Icon
+### **List.Icon**<Badge>API</Badge>
 
 <API src="@/list/ListIcon.tsx" hideTitle></API>
 
-### List.List
+### **List.List**<Badge>API</Badge>
 
 <API src="@/list/ListList.tsx" hideTitle></API>

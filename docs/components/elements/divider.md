@@ -1,4 +1,8 @@
-## Divider 分割线
+---
+order: 2
+---
+
+# Divider 分割线
 
 ```jsx
 import React from 'react';

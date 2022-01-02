@@ -1,4 +1,8 @@
-## Loader 加载
+---
+order: 11
+---
+
+# Loader 加载
 
 ```jsx
 import React from 'react';

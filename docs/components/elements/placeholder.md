@@ -1,3 +1,7 @@
+---
+order: 12
+---
+
 # Placeholder 占位
 
 ```jsx
@@ -81,22 +85,22 @@ export default () => (
 
 ## API
 
-### Placeholder
+### **Placeholder**<Badge>API</Badge>
 
 <API src="@/placeholder/Placeholder.tsx" hideTitle></API>
 
-### PlaceholderHeader
+### **PlaceholderHeader**<Badge>API</Badge>
 
 <API src="@/placeholder/PlaceholderHeader.tsx" hideTitle></API>
 
-### PlaceholderLine
+### **PlaceholderLine**<Badge>API</Badge>
 
 <API src="@/placeholder/PlaceholderLine.tsx" hideTitle></API>
 
-### PlaceholderImage
+### **PlaceholderImage**<Badge>API</Badge>
 
 <API src="@/placeholder/PlaceholderImage.tsx" hideTitle></API>
 
-### PlaceholderParagraph
+### **PlaceholderParagraph**<Badge>API</Badge>
 
 <API src="@/placeholder/PlaceholderParagraph.tsx" hideTitle></API>

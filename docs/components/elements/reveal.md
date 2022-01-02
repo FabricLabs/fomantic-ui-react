@@ -1,3 +1,7 @@
+---
+order: 14
+---
+
 # Reveal 揭示
 
 ```jsx
@@ -176,10 +180,10 @@ export default () => (
 
 ## API
 
-### Reveal
+### **Reveal**<Badge>API</Badge>
 
 <API src="@/reveal/Reveal.tsx" hideTitle></API>
 
-### RevealContent
+### **RevealContent**<Badge>API</Badge>
 
 <API src="@/reveal/RevealContent.tsx" hideTitle></API>

@@ -1,4 +1,8 @@
-## Label 标签
+---
+order: 9
+---
+
+# Label 标签
 
 ```jsx
 import React from 'react';
@@ -88,10 +92,10 @@ export default () => (
 
 ## API
 
-### Label
+### **Label**<Badge>API</Badge>
 
 <API src="@/label/Label.tsx" hideTitle></API>
 
-### Label.Detail
+### **Label.Detail**<Badge>API</Badge>
 
 <API src="@/label/LabelDetail.tsx" hideTitle></API>

@@ -53,3 +53,7 @@ export * from './table';
 export * from './ad';
 
 export * from './card';
+
+export * from './span';
+
+export * from './div';

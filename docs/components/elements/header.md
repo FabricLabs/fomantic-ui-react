@@ -1,4 +1,8 @@
-## Header 标题
+---
+order: 5
+---
+
+# Header 标题
 
 ```jsx
 import React from 'react';
@@ -79,14 +83,14 @@ export default () => (
 
 ## API
 
-### Header
+### **Header**<Badge>API</Badge>
 
 <API src="@/header/Header.tsx" hideTitle></API>
 
-### HeaderContent
+### **HeaderContent**<Badge>API</Badge>
 
 <API src="@/header/HeaderContent.tsx" hideTitle></API>
 
-### HeaderSub
+### **HeaderSub**<Badge>API</Badge>
 
 <API src="@/header/HeaderSub.tsx" hideTitle></API>
