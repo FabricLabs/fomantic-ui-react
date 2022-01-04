@@ -1,15 +1,20 @@
 import { createElement, useEffect, useState } from 'react';
 import { TransitionProps } from './type';
 
-const Transition = ({
-  as = 'div',
-  visible = true,
-  animation = 'fade',
-  duration = 500,
-  className,
-  children,
-  ...props
-}: TransitionProps) => {
+const Transition = (resetProps: TransitionProps) => {
+  const {
+    as = 'div',
+    visible = true,
+    animation = 'fade',
+    duration = 500,
+    className,
+    children,
+    onShow,
+    onHide,
+    onStart,
+    onComplete,
+    ...props
+  } = resetProps;
   const [start, setStart] = useState(true);
   const [update, setUpdate] = useState(false);
   const [css, setCss] = useState('');
@@ -31,28 +36,49 @@ const Transition = ({
   useEffect(() => {
     if (!start) {
       setUpdate(true);
-      if (visible) {
-        setCss(`${animation} in`);
-        if (typeof duration !== 'number') {
-          setStyle({ animationDuration: `${duration.show}ms` });
-          setTimeout(() => {
-            setUpdate(false);
-          }, duration.show);
-        }
-      } else {
-        setCss(`${animation} out`);
-        if (typeof duration !== 'number') {
-          setStyle({ animationDuration: `${duration.hide}ms` });
-          setTimeout(() => {
-            setUpdate(false);
-          }, duration.hide);
-        }
+      if (typeof onStart === 'function') {
+        onStart();
       }
       if (typeof duration === 'number') {
         setStyle({ animationDuration: `${duration}ms` });
         setTimeout(() => {
           setUpdate(false);
+          if (typeof onShow === 'function') {
+            onShow();
+          }
+          if (typeof onHide === 'function') {
+            onHide();
+          }
+          if (typeof onComplete === 'function') {
+            onComplete();
+          }
         }, duration);
+      } else {
+        if (visible) {
+          setCss(`${animation} in`);
+          setStyle({ animationDuration: `${duration.show}ms` });
+          setTimeout(() => {
+            setUpdate(false);
+            if (typeof onShow === 'function') {
+              onShow();
+            }
+            if (typeof onComplete === 'function') {
+              onComplete();
+            }
+          }, duration.show);
+        } else {
+          setCss(`${animation} out`);
+          setStyle({ animationDuration: `${duration.hide}ms` });
+          setTimeout(() => {
+            setUpdate(false);
+            if (typeof onHide === 'function') {
+              onHide();
+            }
+            if (typeof onComplete === 'function') {
+              onComplete();
+            }
+          }, duration.hide);
+        }
       }
     }
   }, [visible]);

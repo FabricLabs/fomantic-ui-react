@@ -1,13 +1,12 @@
-export interface ImageProps {
+import { ElementType } from 'react';
+import { ElementProps } from '../common';
+
+export interface ImageProps extends ElementProps {
   /**
    * 标签名称
    * @default img
    */
-  as?: string;
-  /**
-   * class 属性
-   */
-  className?: string;
+  as?: ElementType;
   /**
    * 包裹
    */
@@ -57,6 +56,13 @@ export interface ImageProps {
    *  @default true
    */
   ui?: boolean;
+  /**
+   * 尺寸
+   */
+  size?: 'mini' | 'tiny' | 'small' | 'medium' | 'large' | 'big' | 'huge' | 'massive';
+}
+
+export interface ImageGroupProps extends ElementProps {
   /**
    * 尺寸
    */

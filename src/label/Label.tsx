@@ -1,6 +1,7 @@
 import React from 'react';
 import { LabelProps } from './type';
 import LabelDetail from './LabelDetail';
+import Icon from '../icon';
 
 const Label = ({
   as = 'div',
@@ -21,10 +22,6 @@ const Label = ({
 }: LabelProps) => {
   const classNames = ['ui', 'label'];
 
-  if (as === '') {
-    as = 'div';
-  }
-
   if (image) {
     classNames.push('image');
   }
@@ -33,8 +30,24 @@ const Label = ({
     classNames.push('tag');
   }
 
-  if (icon) {
+  if (icon === true) {
     classNames.push('icon');
+  } else if (icon && typeof icon === 'string') {
+    if (content) {
+      content = (
+        <>
+          <Icon name={icon} />
+          {content}
+        </>
+      );
+    } else {
+      children = (
+        <>
+          <Icon name={icon} />
+          {content}
+        </>
+      );
+    }
   }
 
   if (circular) {
@@ -69,7 +82,7 @@ const Label = ({
     classNames.push(className);
   }
 
-  return React.createElement(as, { className: classNames.join(' '), ...props }, content || children);
+  return React.createElement(as, { className: classNames.join(' '), ...props }, children || content);
 };
 
 Label.displayName = 'Label';

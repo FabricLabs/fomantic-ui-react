@@ -131,4 +131,89 @@ import { Image } from 'fomantic-ui-react';
 export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="small" centered />;
 ```
 
-<API src="@/image/Image.tsx"></API>
+## 尺寸
+
+| Name    | Size  |
+| ------- | ----- |
+| Mini    | 35px  |
+| Tiny    | 80px  |
+| Small   | 150px |
+| Medium  | 300px |
+| Large   | 450px |
+| Big     | 600px |
+| Huge    | 800px |
+| Massive | 960px |
+
+```jsx
+import React from 'react';
+import { Image } from 'fomantic-ui-react';
+
+export default () => (
+  <>
+    <Image size="mini" src="/images/image.png" />
+    <br />
+    <Image size="tiny" src="/images/image.png" />
+    <br />
+    <Image size="small" src="/images/image.png" />
+    <br />
+    <Image size="medium" src="/images/image.png" />
+    <br />
+    <Image size="large" src="/images/image.png" />
+    <br />
+    <Image size="big" src="/images/image.png" />
+    <br />
+    <Image size="huge" src="/images/image.png" />
+    <br />
+    <Image size="massive" src="/images/image.png" />
+  </>
+);
+```
+
+## Children
+
+```jsx
+import React from 'react';
+import { Image, Label } from 'fomantic-ui-react';
+
+export default () => <Image size="small" content={<Label content="Image not found!" icon="warning" />} />;
+```
+
+## 图片组
+
+```jsx
+import React from 'react';
+import { Image } from 'fomantic-ui-react';
+
+export default () => (
+  <Image.Group size="tiny">
+    <Image src="/images/image.png" />
+    <Image src="/images/image.png" />
+    <Image src="/images/image.png" />
+    <Image src="/images/image.png" />
+  </Image.Group>
+);
+```
+
+```jsx
+import React from 'react';
+import { Image } from 'fomantic-ui-react';
+
+export default () => (
+  <Image.Group size="small">
+    <Image src="/images/image.png" />
+    <Image src="/images/image.png" />
+    <Image src="/images/image.png" />
+    <Image src="/images/image.png" />
+  </Image.Group>
+);
+```
+
+## API
+
+### **Image**<Badge>API</Badge>
+
+<API src="@/image/Image.tsx" hideTitle></API>
+
+### **ImageGroup**<Badge>API</Badge>
+
+<API src="@/image/ImageGroup.tsx" hideTitle></API>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import _ from 'lodash';
 import { ImageProps } from './type';
+import ImageGroup from './ImageGroup';
 
 const Image = ({
   as = 'img',
@@ -18,6 +19,8 @@ const Image = ({
   verticalAlign,
   ui = true,
   size,
+  content,
+  children,
   ...props
 }: ImageProps) => {
   const classNames = [];
@@ -73,10 +76,6 @@ const Image = ({
     classNames.push(className);
   }
 
-  if (as === '') {
-    as = 'img';
-  }
-
   if (wrapped) {
     as = 'div';
   }
@@ -85,7 +84,12 @@ const Image = ({
     as = 'a';
   }
 
-  if (as === 'img') {
+  if (children || content) {
+    if (as === 'img') {
+      as = 'div';
+    }
+    return createElement(as, { className: classNames.join(' '), ...props }, children || content);
+  } else if (as === 'img') {
     return <img className={classNames.join(' ')} {...props} />;
   } else {
     const imgHTMLAttributes = [
@@ -110,10 +114,11 @@ const Image = ({
         rootProps[prop] = val;
       }
     });
-    return React.createElement(as, { className: classNames.join(' '), href, ...rootProps }, <img {...imgProps} />);
+    return createElement(as, { className: classNames.join(' '), href, ...rootProps }, <img {...imgProps} />);
   }
 };
 
 Image.displayName = 'Image';
+Image.Group = ImageGroup;
 
 export default Image;

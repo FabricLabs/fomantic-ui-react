@@ -1,18 +1,5 @@
-import { FNode } from '../common';
-export interface LabelProps {
-  /**
-   * 标签名称
-   * @default div
-   */
-  as?: string;
-  /**
-   * class 属性
-   */
-  className?: string;
-  /**
-   * 标签内容
-   */
-  content?: string;
+import { ElementProps } from '../common';
+export interface LabelProps extends ElementProps {
   /**
    * 图片
    */
@@ -24,7 +11,7 @@ export interface LabelProps {
   /**
    * 图标
    */
-  icon?: boolean;
+  icon?: boolean | string;
   /**
    * 圆形
    */
@@ -68,28 +55,6 @@ export interface LabelProps {
    * 附加
    */
   attached?: 'top' | 'right' | 'bottom' | 'left' | 'top left' | 'top right' | 'bottom left' | 'bottom right';
-  /**
-   * 内容，同 content
-   */
-  children?: FNode;
 }
 
-export interface LabelDetailProps {
-  /**
-   * 标签名称
-   * @default div
-   */
-  as?: string;
-  /**
-   * class 属性
-   */
-  className?: string;
-  /**
-   * 内容
-   */
-  content?: string;
-  /**
-   * 内容，同 content
-   */
-  children?: FNode;
-}
+export interface LabelDetailProps extends ElementProps {}
