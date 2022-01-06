@@ -1,14 +1,13 @@
+import classNames from 'classnames';
 import { createElement } from 'react';
 import { <%= PascalCaseComponent %>Props } from './type';
 
 const <%= PascalCaseComponent %> = ({ as = 'div', className, children, ...props }: <%= PascalCaseComponent %>Props) => {
-  const classNames = ['ui', '<%= component %>'];
-
-  if (className) {
-    classNames.push(className);
+  if (!as) {
+    as = 'div';
   }
 
-  return createElement(as, { className: classNames.join(' '), ...props }, children);
+  return createElement(as, { className: classNames('ui', '<%= component %>', className), ...props }, children);
 };
 
 <%= PascalCaseComponent %>.displayName = '<%= PascalCaseComponent %>';

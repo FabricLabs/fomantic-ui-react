@@ -59,3 +59,5 @@ export * from './span';
 export * from './div';
 
 export * from './transition';
+
+export * from './item';

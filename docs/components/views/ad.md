@@ -2,6 +2,7 @@
 group:
   path: /components/views
   title: 视图
+order: 0
 ---
 
 # Ad 广告

@@ -22,8 +22,6 @@ const Transition = ({
   const [css, setCss] = useState('');
   const [style, setStyle] = useState({});
 
-  const transitionRef = useRef();
-
   const handleStart = () => {
     setCss(visible ? 'visible' : 'hidden');
   };
