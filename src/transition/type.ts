@@ -68,6 +68,7 @@ export interface TransitionProps extends ModuleProps {
    * 结束时触发
    */
   onComplete?: Function;
+  style?: object;
 }
 
 export interface TransitionGroupProps extends ModuleProps {

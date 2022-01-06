@@ -1,17 +1,13 @@
-import { MouseEvent } from 'react';
+import { ElementType, MouseEvent } from 'react';
 
-import { FNode } from '../common';
+import { ElementProps } from '../common';
 
-export interface FButtonProps {
+export interface ButtonProps extends ElementProps {
   /**
    * 标签名称
    * @default button
    */
-  as?: string;
-  /**
-   * class 属性
-   */
-  className?: string;
+  as?: ElementType;
   /**
    * 紧凑
    */
@@ -63,32 +59,12 @@ export interface FButtonProps {
    */
   icon?: string | boolean;
   /**
-   * 按钮内容
-   */
-  content?: FNode;
-  /**
-   * 按钮内容，同 content
-   */
-  children?: FNode;
-  /**
    * 点击时触发
    */
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
-export interface FButtonContentProps {
-  /**
-   * 标签名称
-   */
-  as?: string;
-  /**
-   * class 属性
-   */
-  className?: string;
-  /**
-   * 内容
-   */
-  content?: string;
+export interface ButtonContentProps extends ElementProps {
   /**
    * 最初隐藏，悬停时可见。
    */
@@ -97,8 +73,4 @@ export interface FButtonContentProps {
    * 最初可见，悬停时隐藏。
    */
   visible?: boolean;
-  /**
-   * 内容 同 content
-   */
-  children?: FNode;
 }

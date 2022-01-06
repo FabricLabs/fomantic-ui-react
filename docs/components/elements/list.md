@@ -351,7 +351,7 @@ export default () => (
 
 <API src="@/list/ListContent.tsx" hideTitle></API>
 
-### **List.Headert**<Badge>API</Badge>
+### **List.Header**<Badge>API</Badge>
 
 <API src="@/list/ListHeader.tsx" hideTitle></API>
 

@@ -1,54 +1,9 @@
-import React, {
-  Children,
-  createElement,
-  forwardRef,
-  isValidElement,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import React, { Children, createElement, isValidElement, ReactNode, useEffect, useState } from 'react';
 import { TransitionGroupProps } from './type';
 import Transition from '.';
 import _ from 'lodash';
 
 const TransitionGroup = ({
-  as = 'div',
-  animation = 'fade',
-  duration = 500,
-  className,
-  children,
-  ...props
-}: TransitionGroupProps) => {
-  const childRefs = useRef();
-
-  /*     useLayoutEffect(() => {
-      Children.forEach(children, (child) => {
-        if (isValidElement(child)) {
-          const { key } = child;
-          if (typeof key === 'string') {
-            childRefs.current[key];
-          }
-        }
-      });
-    }, [children]); */
-
-  return useMemo(() => {
-    const childrenToRender = Children.map(children, (child) => {
-      if (isValidElement(child)) {
-        return <Transition ref={childRefs} as={child.type} key={child.key} {...child.props} />;
-      }
-    });
-    return createElement(as, { className, ...props }, childrenToRender);
-  }, [children]);
-};
-
-TransitionGroup.displayName = 'TransitionGroup';
-
-export default TransitionGroup;
-
-/* const TransitionGroup = ({
   as = 'div',
   animation = 'fade',
   duration = 500,
@@ -127,4 +82,4 @@ export default TransitionGroup;
 
 TransitionGroup.displayName = 'TransitionGroup';
 
-export default TransitionGroup; */
+export default TransitionGroup;

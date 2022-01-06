@@ -1,22 +1,18 @@
-import { createElement } from 'react';
+import { createElement, forwardRef } from 'react';
+import classnames from 'classnames';
 import { SpanProps } from './type';
 
-const Span = ({ as = 'span', floated, className, children, ...props }: SpanProps) => {
-  const classNames = [];
-
-  if (floated) {
-    classNames.push(floated);
-    classNames.push('floated');
-  }
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  className = classNames.length > 0 ? classNames.join(' ') : undefined;
-
-  return createElement(as, { className, ...props }, children);
-};
+const Span = forwardRef(({ as = 'span', floated, className, content, children, ...props }: SpanProps, ref: any) => {
+  return createElement(
+    as,
+    {
+      ref,
+      className: classnames({ [floated as string]: floated, floated: floated }, className) || undefined,
+      ...props,
+    },
+    children || content,
+  );
+});
 
 Span.displayName = 'Span';
 

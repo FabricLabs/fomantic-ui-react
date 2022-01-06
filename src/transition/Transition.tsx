@@ -1,109 +1,114 @@
-import { createElement, useEffect, useState } from 'react';
+import { createElement, useEffect, useRef, useState } from 'react';
+import classnames from 'classnames';
+import { omit } from 'lodash';
 import { TransitionProps } from './type';
+import TransitionGroup from './TransitionGroup';
+import forwardRefWithStatics from '../_util/forwardRefWithStatics';
 
-const Transition = (resetProps: TransitionProps) => {
-  const {
-    as = 'div',
-    visible = true,
-    animation = 'fade',
-    duration = 500,
-    className,
-    children,
-    onShow,
-    onHide,
-    onStart,
-    onComplete,
-    ...props
-  } = resetProps;
-  const [start, setStart] = useState(true);
-  const [update, setUpdate] = useState(false);
-  const [css, setCss] = useState('');
-  const [style, setStyle] = useState({});
+const Transition = forwardRefWithStatics(
+  (
+    {
+      as = 'div',
+      visible = true,
+      animation = 'fade',
+      duration = 500,
+      className,
+      children,
+      onShow,
+      onHide,
+      onStart,
+      onComplete,
+      ...props
+    }: TransitionProps,
+    ref: any,
+  ) => {
+    const [start, setStart] = useState(true);
+    const [update, setUpdate] = useState(false);
+    const [css, setCss] = useState('');
+    const [style, setStyle] = useState({});
 
-  const handleStart = () => {
-    if (visible) {
-      setCss('visible');
-    } else {
-      setCss('hidden');
-    }
-  };
+    const transitionRef = useRef();
 
-  useEffect(() => {
-    handleStart();
-    setStart(false);
-  }, []);
+    const handleStart = () => {
+      setCss(visible ? 'visible' : 'hidden');
+    };
 
-  useEffect(() => {
-    if (!start) {
-      setUpdate(true);
-      if (typeof onStart === 'function') {
-        onStart();
-      }
-      if (typeof duration === 'number') {
-        setStyle({ animationDuration: `${duration}ms` });
-        setTimeout(() => {
-          setUpdate(false);
-          if (typeof onShow === 'function') {
-            onShow();
-          }
-          if (typeof onHide === 'function') {
-            onHide();
-          }
-          if (typeof onComplete === 'function') {
-            onComplete();
-          }
-        }, duration);
-      } else {
-        if (visible) {
-          setCss(`${animation} in`);
-          setStyle({ animationDuration: `${duration.show}ms` });
+    useEffect(() => {
+      handleStart();
+      setStart(false);
+    }, []);
+
+    useEffect(() => {
+      if (!start) {
+        setUpdate(true);
+        if (typeof onStart === 'function') {
+          onStart();
+        }
+        if (typeof duration === 'number') {
+          setCss(`${animation} ${visible ? 'in' : 'out'}`);
+          setStyle({ animationDuration: `${duration}ms` });
           setTimeout(() => {
             setUpdate(false);
             if (typeof onShow === 'function') {
               onShow();
             }
-            if (typeof onComplete === 'function') {
-              onComplete();
-            }
-          }, duration.show);
-        } else {
-          setCss(`${animation} out`);
-          setStyle({ animationDuration: `${duration.hide}ms` });
-          setTimeout(() => {
-            setUpdate(false);
             if (typeof onHide === 'function') {
               onHide();
             }
             if (typeof onComplete === 'function') {
               onComplete();
             }
-          }, duration.hide);
+          }, duration);
+        } else {
+          if (visible) {
+            setCss(`${animation} in`);
+            setStyle({ animationDuration: `${duration.show}ms` });
+            setTimeout(() => {
+              setUpdate(false);
+              if (typeof onShow === 'function') {
+                onShow();
+              }
+              if (typeof onComplete === 'function') {
+                onComplete();
+              }
+            }, duration.show);
+          } else {
+            setCss(`${animation} out`);
+            setStyle({ animationDuration: `${duration.hide}ms` });
+            setTimeout(() => {
+              setUpdate(false);
+              if (typeof onHide === 'function') {
+                onHide();
+              }
+              if (typeof onComplete === 'function') {
+                onComplete();
+              }
+            }, duration.hide);
+          }
         }
       }
-    }
-  }, [visible]);
+    }, [visible]);
 
-  useEffect(() => {
-    if (!update) {
-      handleStart();
-      setStyle({});
-    }
-  }, [update]);
+    useEffect(() => {
+      if (!update) {
+        handleStart();
+        setStyle({});
+      }
+    }, [update]);
 
-  const classNames = ['transition'];
-
-  classNames.push(css);
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  return createElement(
-    as,
-    { className: classNames.join(' '), style: { ...style, ...props['style'] }, ...props },
-    children,
-  );
-};
+    return createElement(
+      as,
+      {
+        ref: ref || transitionRef,
+        className: classnames('transition', css, className),
+        style: { ...style, ...props.style },
+        ...omit(props, 'style'),
+      },
+      children,
+    );
+  },
+  { Group: TransitionGroup },
+);
 
 Transition.displayName = 'Transition';
 

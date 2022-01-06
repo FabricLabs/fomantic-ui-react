@@ -1,22 +1,18 @@
-import { createElement } from 'react';
+import classnames from 'classnames';
+import { createElement, forwardRef } from 'react';
 import { DivProps } from './type';
 
-const Div = ({ as = 'div', floated, className, children, ...props }: DivProps) => {
-  const classNames = [];
-
-  if (floated) {
-    classNames.push(floated);
-    classNames.push('floated');
-  }
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  className = classNames.length > 0 ? classNames.join(' ') : undefined;
-
-  return createElement(as, { className, ...props }, children);
-};
+const Div = forwardRef(({ as = 'div', floated, className, content, children, ...props }: DivProps, ref: any) => {
+  return createElement(
+    as,
+    {
+      ref,
+      className: classnames({ [floated as string]: floated, floated: floated }, className) || undefined,
+      ...props,
+    },
+    children || content,
+  );
+});
 
 Div.displayName = 'Div';
 

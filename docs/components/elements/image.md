@@ -8,14 +8,14 @@ order: 7
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="small" />;
+export default () => <Image src="/images/image.png" size="small" />;
 ```
 
 ```jsx
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="small" wrapped />;
+export default () => <Image src="/images/image.png" size="small" wrapped />;
 ```
 
 ## 链接
@@ -24,14 +24,7 @@ export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => (
-  <Image
-    src="https://fomantic-ui.com/images/wireframe/image.png"
-    size="medium"
-    href="https://www.baidu.com"
-    target="_blank"
-  />
-);
+export default () => <Image src="/images/image.png" size="medium" href="https://www.baidu.com" target="_blank" />;
 ```
 
 ## 隐藏
@@ -40,7 +33,7 @@ export default () => (
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="small" hidden />;
+export default () => <Image src="/images/image.png" size="small" hidden />;
 ```
 
 ## 禁用
@@ -49,7 +42,7 @@ export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="small" disabled />;
+export default () => <Image src="/images/image.png" size="small" disabled />;
 ```
 
 ## 头像
@@ -60,7 +53,7 @@ import { Image } from 'fomantic-ui-react';
 
 export default () => (
   <div>
-    <Image src="https://fomantic-ui.com/images/wireframe/image.png" avatar />
+    <Image src="/images/image.png" avatar />
     <span>Username</span>
   </div>
 );
@@ -72,7 +65,7 @@ export default () => (
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/white-image.png" size="medium" bordered />;
+export default () => <Image src="/images/white-image.png" size="medium" bordered />;
 ```
 
 ## 流式布局
@@ -81,7 +74,7 @@ export default () => <Image src="https://fomantic-ui.com/images/wireframe/white-
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" bordered />;
+export default () => <Image src="/images/image.png" bordered />;
 ```
 
 ## 圆角
@@ -90,7 +83,7 @@ export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="medium" rounded />;
+export default () => <Image src="/images/image.png" size="medium" rounded />;
 ```
 
 ## 圆形
@@ -99,7 +92,7 @@ export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/square-image.png" size="medium" circular />;
+export default () => <Image src="/images/square-image.png" size="medium" circular />;
 ```
 
 ## 垂直对齐
@@ -110,13 +103,13 @@ import { Image, Divider } from 'fomantic-ui-react';
 
 export default () => (
   <>
-    <Image src="https://fomantic-ui.com/images/wireframe/square-image.png" size="tiny" verticalAlign="top" />
+    <Image src="/images/square-image.png" size="tiny" verticalAlign="top" />
     <span>Top Aligned</span>
     <Divider />
-    <Image src="https://fomantic-ui.com/images/wireframe/square-image.png" size="tiny" verticalAlign="middle" />
+    <Image src="/images/square-image.png" size="tiny" verticalAlign="middle" />
     <span>Middle Aligned</span>
     <Divider />
-    <Image src="https://fomantic-ui.com/images/wireframe/square-image.png" size="tiny" verticalAlign="bottom" />
+    <Image src="/images/square-image.png" size="tiny" verticalAlign="bottom" />
     <span>Bottom Aligned</span>
   </>
 );
@@ -128,7 +121,7 @@ export default () => (
 import React from 'react';
 import { Image } from 'fomantic-ui-react';
 
-export default () => <Image src="https://fomantic-ui.com/images/wireframe/image.png" size="small" centered />;
+export default () => <Image src="/images/image.png" size="small" centered />;
 ```
 
 ## 尺寸

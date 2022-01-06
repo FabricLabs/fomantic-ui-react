@@ -1,7 +1,9 @@
 export default {
-  entry: 'src/index.ts',
-  esm: 'babel',
-  // cjs: 'rollup',
-  // extractCSS: true,
-  // runtimeHelpers: true,
+  cjs: 'babel',
+  esm: { type: 'babel', importLibToEs: true },
+  runtimeHelpers: true,
+  preCommit: {
+    eslint: true,
+    prettier: true,
+  },
 };
