@@ -1,7 +1,8 @@
-import React from 'react';
+import { createElement } from 'react';
 import { HeaderProps } from './type';
 import HeaderContent from './HeaderContent';
 import HeaderSub from './HeaderSub';
+import classNames from 'classnames';
 
 const Header = ({
   as = 'div',
@@ -21,65 +22,37 @@ const Header = ({
   children,
   ...props
 }: HeaderProps) => {
-  if (as === '') {
+  if (!as) {
     as = 'div';
   }
 
-  const classNames = ['ui', 'header'];
-
-  if (sub) {
-    classNames.push('sub');
-  }
-
-  if (icon) {
-    classNames.push('icon');
-  }
-
-  if (disabled) {
-    classNames.push('disabled');
-  }
-
-  if (dividing) {
-    classNames.push('dividing');
-  }
-
-  if (block) {
-    classNames.push('block');
-  }
-
-  if (inverted) {
-    classNames.push('inverted');
-  }
-
-  if (floated) {
-    classNames.push(floated);
-  }
-
-  if (attached) {
-    classNames.push('attached');
-    if (typeof attached === 'string') {
-      classNames.push(attached);
-    }
-  }
-
-  if (textAlign) {
-    classNames.push(textAlign);
-    classNames.push('aligned');
-  }
-
-  if (size) {
-    classNames.push(size);
-  }
-
-  if (color) {
-    classNames.push(color);
-  }
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  return React.createElement(as, { className: classNames.join(' '), ...props }, children || content);
+  return createElement(
+    as,
+    {
+      className: classNames(
+        'ui',
+        'header',
+        {
+          sub,
+          icon,
+          disabled,
+          dividing,
+          block,
+          inverted,
+          [floated as string]: floated,
+          attached,
+          [attached as string]: typeof attached === 'string',
+          [textAlign as string]: textAlign,
+          aligned: textAlign,
+          [size as string]: size,
+          [color as string]: color,
+        },
+        className,
+      ),
+      ...props,
+    },
+    children || content,
+  );
 };
 
 Header.displayName = 'Header';

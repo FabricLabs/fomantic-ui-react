@@ -1,18 +1,13 @@
-import React from 'react';
+import classNames from 'classnames';
+import { createElement } from 'react';
 import { HeaderContentProps } from './type';
 
 const HeaderContent = ({ as = 'div', className, content, children, ...props }: HeaderContentProps) => {
-  if (as === '') {
+  if (!as) {
     as = 'div';
   }
 
-  const classNames = ['content'];
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  return React.createElement(as, { className: classNames.join(' '), ...props }, children || content);
+  return createElement(as, { className: classNames('content', className), ...props }, children || content);
 };
 
 HeaderContent.displayName = 'HeaderContent';

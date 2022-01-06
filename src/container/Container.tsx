@@ -1,4 +1,5 @@
-import React from 'react';
+import classNames from 'classnames';
+import { createElement } from 'react';
 import { ContainerProps } from './type';
 
 const Container = ({
@@ -11,30 +12,23 @@ const Container = ({
   children,
   ...containerProps
 }: ContainerProps) => {
-  const classNames = ['ui', 'container'];
-
-  if (as === '') {
+  if (!as) {
     as = 'div';
   }
 
-  if (fluid) {
-    classNames.push('fluid');
-  }
-
-  if (text) {
-    classNames.push('text');
-  }
-
-  if (textAlign) {
-    classNames.push(textAlign);
-    classNames.push('aligned');
-  }
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  return React.createElement(as, { className: classNames.join(' '), ...containerProps }, content || children);
+  return createElement(
+    as,
+    {
+      className: classNames(
+        'ui',
+        'container',
+        { fluid, text, [textAlign as string]: textAlign, aligned: textAlign },
+        className,
+      ),
+      ...containerProps,
+    },
+    children || content,
+  );
 };
 
 Container.displayName = 'Container';

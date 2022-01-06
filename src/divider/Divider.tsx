@@ -1,14 +1,13 @@
-import React from 'react';
+import classNames from 'classnames';
+import { createElement } from 'react';
 import { DividerProps } from './type';
 
 const Divider = ({ as = 'div', className, ...props }: DividerProps) => {
-  const classNames = ['ui', 'divider'];
-
-  if (className) {
-    classNames.push(className);
+  if (!as) {
+    as = 'div';
   }
 
-  return React.createElement(as, { className: classNames.join(' '), ...props });
+  return createElement(as, { className: classNames('ui', 'divider', className), ...props });
 };
 
 Divider.displayName = 'Divider';

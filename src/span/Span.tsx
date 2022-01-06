@@ -1,5 +1,5 @@
 import { createElement, forwardRef } from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import { SpanProps } from './type';
 
 const Span = forwardRef(({ as = 'span', floated, className, content, children, ...props }: SpanProps, ref: any) => {
@@ -7,7 +7,7 @@ const Span = forwardRef(({ as = 'span', floated, className, content, children, .
     as,
     {
       ref,
-      className: classnames({ [floated as string]: floated, floated: floated }, className) || undefined,
+      className: classNames({ [floated as string]: floated, floated: floated }, className) || undefined,
       ...props,
     },
     children || content,

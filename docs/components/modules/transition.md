@@ -5,13 +5,6 @@ order: 7
 # Transition 过渡
 
 ```jsx
-import React from 'react';
-import { Div } from 'fomantic-ui-react';
-
-export default () => <Div content="span" />;
-```
-
-<!-- ```jsx
 import React, { useState } from 'react';
 import { Transition, Image, Button } from 'fomantic-ui-react';
 
@@ -70,7 +63,7 @@ export default () => {
     </>
   );
 };
-``` -->
+```
 
 ## 组
 

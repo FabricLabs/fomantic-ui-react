@@ -6,7 +6,7 @@ import { Card, Image, Icon } from 'fomantic-ui-react';
 
 export default () => (
   <Card>
-    <Image src="/images/kristy.png" ui={false} wrapped />
+    <Image src="/images/avatar/large/kristy.png" ui={false} wrapped />
     <Card.Content>
       <Card.Header>Kristy</Card.Header>
       <Card.Meta>
@@ -32,7 +32,7 @@ export default () => (
   <Card>
     <Card.Content>
       <Card.Meta floated="right" content="14h" />
-      <Image avatar src="/images/elliot.jpg" />
+      <Image avatar src="/images/avatar/large/elliot.jpg" />
       Elliot
     </Card.Content>
     <Image src="/images/image.png" ui={false} wrapped />

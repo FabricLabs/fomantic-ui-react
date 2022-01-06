@@ -1,14 +1,9 @@
+import classNames from 'classnames';
 import React from 'react';
 import { FlagProps } from './type';
 
 const Flag = ({ className, name, ...props }: FlagProps) => {
-  const classNames = ['flag', name];
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  return <i className={classNames.join(' ')} {...props} />;
+  return <i className={classNames('flag', name, className)} {...props} />;
 };
 
 Flag.displayName = 'Flag';
