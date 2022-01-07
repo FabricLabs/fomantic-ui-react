@@ -63,3 +63,5 @@ export * from './transition';
 export * from './item';
 
 export * from './feed';
+
+export * from './comment';
