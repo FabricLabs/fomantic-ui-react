@@ -1,7 +1,6 @@
 export interface FInputProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**
@@ -14,7 +13,6 @@ export interface FInputProps {
   icon?: string;
   /**
    * 图标位置
-   * @default right
    */
   iconPosition?: 'left' | 'right' | 'left corner' | 'right corner';
   /**

@@ -1,12 +1,6 @@
-import { ElementType } from 'react';
 import { ElementProps } from '../common';
 
 export interface ImageProps extends ElementProps {
-  /**
-   * 标签名称
-   * @default img
-   */
-  as?: ElementType;
   /**
    * 包裹
    */

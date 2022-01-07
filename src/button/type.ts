@@ -4,11 +4,6 @@ import { ElementProps } from '../common';
 
 export interface ButtonProps extends ElementProps {
   /**
-   * 标签名称
-   * @default button
-   */
-  as?: ElementType;
-  /**
    * 紧凑
    */
   compact?: boolean;

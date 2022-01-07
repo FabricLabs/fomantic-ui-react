@@ -1,7 +1,6 @@
 export interface DividerProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**

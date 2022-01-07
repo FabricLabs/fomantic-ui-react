@@ -3,7 +3,6 @@ import { FNode } from '../common';
 export interface HeaderProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**
@@ -81,7 +80,6 @@ export interface HeaderProps {
 export interface HeaderContentProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**
@@ -101,7 +99,6 @@ export interface HeaderContentProps {
 export interface HeaderSubProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**

@@ -8,17 +8,14 @@ interface shape {
 export interface TransitionProps extends ModuleProps {
   /**
    * 显示组件
-   * @default true
    */
   visible?: boolean;
   /**
    * 持续时间；单位：ms
-   * @default 500
    */
   duration?: number | shape;
   /**
    * 动画
-   * @default fade
    */
   animation?:
     | 'browse'
@@ -73,7 +70,6 @@ export interface TransitionProps extends ModuleProps {
 export interface TransitionGroupProps extends ModuleProps {
   /**
    * 动画
-   * @default fade
    */
   animation?:
     | 'browse'
@@ -109,7 +105,6 @@ export interface TransitionGroupProps extends ModuleProps {
     | 'glow';
   /**
    * 持续时间；单位：ms
-   * @default 500
    */
   duration?: number | shape;
 }

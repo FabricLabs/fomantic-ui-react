@@ -1,7 +1,6 @@
 export interface IconProps {
   /**
    * 标签名称
-   * @default i
    */
   as?: string;
   /**

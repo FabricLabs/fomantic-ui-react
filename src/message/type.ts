@@ -66,20 +66,8 @@ export interface MessageProps extends CollectionProps {
 
 export interface MessageHeaderProps extends CollectionProps {}
 
-export interface MessageListProps extends CollectionProps {
-  /**
-   * 标签名称
-   * @default ul
-   */
-  as?: ElementType;
-}
+export interface MessageListProps extends CollectionProps {}
 
-export interface MessageItemProps extends CollectionProps {
-  /**
-   * 标签名称
-   * @default li
-   */
-  as?: ElementType;
-}
+export interface MessageItemProps extends CollectionProps {}
 
 export interface MessageContentProps extends CollectionProps {}

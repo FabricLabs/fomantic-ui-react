@@ -2,11 +2,6 @@ import { ElementProps } from '../common';
 
 export interface TextProps extends ElementProps {
   /**
-   * 标签名称
-   * @default span
-   */
-  as?: string;
-  /**
    * 颜色
    */
   color?:

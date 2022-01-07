@@ -9,7 +9,6 @@ import { CollectionProps } from '../common';
 export interface BreadcrumbProps extends CollectionProps {
   /**
    * 分隔符自定义
-   * @default /
    */
   divider?: any;
   /**

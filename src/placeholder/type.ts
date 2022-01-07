@@ -5,7 +5,6 @@ export interface PlaceholderProps extends ElementProps {}
 export interface PlaceholderLineProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**
@@ -23,7 +22,6 @@ export interface PlaceholderParagraphProps extends ElementProps {}
 export interface PlaceholderImageProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**

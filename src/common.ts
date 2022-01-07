@@ -43,7 +43,6 @@ export interface KeysType {
 export interface CommonProps extends StyledProps {
   /**
    * 标签或组件名称
-   * @default div
    */
   as?: ElementType;
   children?: FNode;

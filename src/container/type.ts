@@ -3,7 +3,6 @@ import { FNode } from '../common';
 export interface ContainerProps {
   /**
    * 标签名称
-   * @default div
    */
   as?: string;
   /**
