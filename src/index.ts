@@ -67,3 +67,5 @@ export * from './feed';
 export * from './comment';
 
 export * from './statistic';
+
+export * from './accordion';
