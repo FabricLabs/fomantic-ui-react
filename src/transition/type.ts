@@ -5,6 +5,44 @@ interface shape {
   show: number;
 }
 
+export type animation =
+  | 'browse'
+  | 'browse right'
+  | 'drop'
+  | 'fade'
+  | 'fade up'
+  | 'fade down'
+  | 'fade left'
+  | 'fade right'
+  | 'fly up'
+  | 'fly down'
+  | 'fly left'
+  | 'fly right'
+  | 'horizontal flip'
+  | 'vertical flip'
+  | 'scale'
+  | 'slide up'
+  | 'slide down'
+  | 'slide left'
+  | 'slide right'
+  | 'swing up'
+  | 'swing down'
+  | 'swing left'
+  | 'swing right'
+  | 'zoom'
+  | 'jiggle'
+  | 'flash'
+  | 'shake'
+  | 'pulse'
+  | 'tada'
+  | 'bounce'
+  | 'glow';
+
+export interface animationShape {
+  show: animation;
+  hide: animation;
+}
+
 export interface TransitionProps extends ModuleProps {
   /**
    * 显示组件
@@ -17,38 +55,7 @@ export interface TransitionProps extends ModuleProps {
   /**
    * 动画
    */
-  animation?:
-    | 'browse'
-    | 'browse right'
-    | 'drop'
-    | 'fade'
-    | 'fade up'
-    | 'fade down'
-    | 'fade left'
-    | 'fade right'
-    | 'fly up'
-    | 'fly down'
-    | 'fly left'
-    | 'fly right'
-    | 'horizontal flip'
-    | 'vertical flip'
-    | 'scale'
-    | 'slide up'
-    | 'slide down'
-    | 'slide left'
-    | 'slide right'
-    | 'swing up'
-    | 'swing down'
-    | 'swing left'
-    | 'swing right'
-    | 'zoom'
-    | 'jiggle'
-    | 'flash'
-    | 'shake'
-    | 'pulse'
-    | 'tada'
-    | 'bounce'
-    | 'glow';
+  animation?: animation | animationShape;
   /**
    * 显示完成时触发
    */

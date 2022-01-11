@@ -1,0 +1,59 @@
+/*******************************
+            Theme
+*******************************/
+
+@type    : 'module';
+@element : 'popper';
+
+@import (multiple) '../../theme.config';
+
+.ui.popper {
+  min-width: min-content;
+  max-width: @maxWidth;
+  z-index: @zIndex;
+  border: @border;
+  line-height: @lineHeight;
+  background: @background;
+  font-weight: @fontWeight;
+  font-style: @fontStyle;
+  color: @color;
+  border-radius: @borderRadius;
+  box-shadow: @boxShadow;
+  padding: @verticalPadding @horizontalPadding;
+}
+
+.ui.popper[data-popper-placement^="top"] > .arrow {
+  bottom: @arrowOffset;
+  &::before{
+    transform: rotate(45deg);
+  }
+}
+
+.ui.popper[data-popper-placement^="bottom"] > .arrow {
+  top: @arrowOffset;
+  &::before{
+    transform: rotate(-135deg);
+  }
+}
+
+.ui.popper[data-popper-placement^="left"] > .arrow {
+  right: @arrowOffset;
+  &::before{
+    transform: rotate(-45deg);
+  }
+}
+.ui.popper[data-popper-placement^="right"] > .arrow {
+  left: @arrowOffset;
+  &::before{
+    transform: rotate(135deg);
+  }
+}
+.ui.popper > .arrow::before {
+  content: '';
+  width: @arrowSize;
+  height: @arrowSize;
+  background: @arrowBackground;
+  z-index: @arrowZIndex;
+  box-shadow: @arrowBoxShadow;
+  display: block;
+}
