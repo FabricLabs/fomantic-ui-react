@@ -1,5 +1,5 @@
 import { ElementProps } from '../common';
-import { FIconProps } from '../icon/type';
+import { IconProps } from '../icon/type';
 
 export interface ListProps extends ElementProps {
   /**
@@ -53,7 +53,7 @@ export interface ListHeaderProps extends ElementProps {}
 
 export interface ListDescriptionProps extends ElementProps {}
 
-export interface ListIconProps extends FIconProps {
+export interface ListIconProps extends IconProps {
   /**
    * 垂直对齐方式
    */

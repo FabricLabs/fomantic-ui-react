@@ -8,7 +8,7 @@ const SegmentInline = ({ as = 'div', className, content, children, ...props }: S
     classNames.push(className);
   }
 
-  if (as === '') {
+  if (!as) {
     as = 'div';
   }
 

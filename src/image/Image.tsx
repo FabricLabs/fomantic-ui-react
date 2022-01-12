@@ -105,8 +105,8 @@ const Image = ({
       'useMap',
       'width',
     ];
-    const rootProps = {};
-    const imgProps = {};
+    const rootProps: { [key: string]: any } = {};
+    const imgProps: { [key: string]: any } = {};
     _.forEach(props, (val: any, prop: string) => {
       if (_.includes(imgHTMLAttributes, prop)) {
         imgProps[prop] = val;

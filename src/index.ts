@@ -71,3 +71,5 @@ export * from './statistic';
 export * from './accordion';
 
 export * from './popup';
+
+export * from './configProvider';

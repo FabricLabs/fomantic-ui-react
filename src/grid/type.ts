@@ -1,5 +1,40 @@
 import { CollectionProps } from '../common';
 
+export type columnType =
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | 11
+  | 12
+  | 13
+  | 14
+  | 15
+  | 16
+  | 'one'
+  | 'tow'
+  | 'three'
+  | 'four'
+  | 'five'
+  | 'six'
+  | 'seven'
+  | 'eight'
+  | 'nine'
+  | 'ten'
+  | 'eleven'
+  | 'twelve'
+  | 'thirteen'
+  | 'fourteen'
+  | 'fifteen'
+  | 'sixteen'
+  | 'equal';
+
 export interface GridProps extends CollectionProps {
   /**
    * 居中
@@ -28,40 +63,7 @@ export interface GridProps extends CollectionProps {
   /**
    * 列数
    */
-  columns?:
-    | 1
-    | 2
-    | 3
-    | 4
-    | 5
-    | 6
-    | 7
-    | 8
-    | 9
-    | 10
-    | 11
-    | 12
-    | 13
-    | 14
-    | 15
-    | 16
-    | 'one'
-    | 'tow'
-    | 'three'
-    | 'four'
-    | 'five'
-    | 'six'
-    | 'seven'
-    | 'eight'
-    | 'nine'
-    | 'ten'
-    | 'eleven'
-    | 'twelve'
-    | 'thirteen'
-    | 'fourteen'
-    | 'fifteen'
-    | 'sixteen'
-    | 'equal';
+  columns?: columnType;
 }
 
 export interface GridRowProps extends CollectionProps {
@@ -93,40 +95,7 @@ export interface GridRowProps extends CollectionProps {
   /**
    * 列数
    */
-  columns?:
-    | 1
-    | 2
-    | 3
-    | 4
-    | 5
-    | 6
-    | 7
-    | 8
-    | 9
-    | 10
-    | 11
-    | 12
-    | 13
-    | 14
-    | 15
-    | 16
-    | 'one'
-    | 'tow'
-    | 'three'
-    | 'four'
-    | 'five'
-    | 'six'
-    | 'seven'
-    | 'eight'
-    | 'nine'
-    | 'ten'
-    | 'eleven'
-    | 'twelve'
-    | 'thirteen'
-    | 'fourteen'
-    | 'fifteen'
-    | 'sixteen'
-    | 'equal';
+  columns?: columnType;
 }
 
 export interface GridColumnProps extends CollectionProps {
@@ -154,37 +123,5 @@ export interface GridColumnProps extends CollectionProps {
   /**
    * 横跨列数
    */
-  wide?:
-    | 1
-    | 2
-    | 3
-    | 4
-    | 5
-    | 6
-    | 7
-    | 8
-    | 9
-    | 10
-    | 11
-    | 12
-    | 13
-    | 14
-    | 15
-    | 16
-    | 'one'
-    | 'tow'
-    | 'three'
-    | 'four'
-    | 'five'
-    | 'six'
-    | 'seven'
-    | 'eight'
-    | 'nine'
-    | 'ten'
-    | 'eleven'
-    | 'twelve'
-    | 'thirteen'
-    | 'fourteen'
-    | 'fifteen'
-    | 'sixteen';
+  wide?: columnType;
 }

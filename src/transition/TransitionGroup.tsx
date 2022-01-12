@@ -1,16 +1,6 @@
-import React, {
-  Children,
-  createElement,
-  forwardRef,
-  isValidElement,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import React, { Children, createElement, isValidElement, useMemo, useRef } from 'react';
 import { TransitionGroupProps } from './type';
-import Transition from '.';
+import Transition from './Transition';
 import _ from 'lodash';
 
 const TransitionGroup = ({

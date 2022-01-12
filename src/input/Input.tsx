@@ -84,7 +84,7 @@ const Input = forwardRef(
       { ref, className: classNames.join(' '), style },
       <>
         <input type="text" disabled={disabled} {...props} />
-        {renderIcon && <Icon name={icon} />}
+        {renderIcon && <Icon name={icon!} />}
       </>,
     );
   },

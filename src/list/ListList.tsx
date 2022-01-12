@@ -12,7 +12,7 @@ const ListList = ({ as = 'div', className, content, children, ...props }: ListLi
     classNames.push(className);
   }
 
-  if (as === '') {
+  if (!as) {
     as = 'div';
   }
 

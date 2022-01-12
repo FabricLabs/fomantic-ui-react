@@ -112,9 +112,6 @@ const Transition = forwardRefWithStatics<TransitionProps, HTMLDivElement>(
       children,
     );
   },
-  {
-    Group: TransitionGroup,
-  },
 );
 
 Transition.displayName = 'Transition';

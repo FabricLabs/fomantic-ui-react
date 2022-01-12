@@ -12,7 +12,7 @@ const SegmentGroup = ({ as = 'div', className, basic, content, children, ...prop
     classNames.push(className);
   }
 
-  if (as === '') {
+  if (!as) {
     as = 'div';
   }
 

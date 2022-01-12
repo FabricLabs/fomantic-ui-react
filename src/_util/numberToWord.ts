@@ -1,4 +1,5 @@
-export const numberToWordMap = {
+import { columnType } from '../grid/type';
+export const numberToWordMap: { [key: number]: string } = {
   1: 'one',
   2: 'two',
   3: 'three',
@@ -17,11 +18,11 @@ export const numberToWordMap = {
   16: 'sixteen',
 };
 
-export const numberToWord = (value: number | string) => {
-  const type = typeof value;
-  if (type === 'string' || type === 'number') {
-    return numberToWordMap[value] || value;
+export const numberToWord = (value: columnType) => {
+  if (typeof value === 'string') {
+    return value;
+  } else if (typeof value === 'number') {
+    return numberToWordMap[value as number];
   }
-
   return '';
 };

@@ -49,7 +49,7 @@ const Segment = ({
     classNames.push(className);
   }
 
-  if (as === '') {
+  if (!as) {
     as = 'div';
   }
 
