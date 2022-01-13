@@ -1,5 +1,3 @@
-import './style/index.js';
-
 export * from './button';
 
 export * from './container';

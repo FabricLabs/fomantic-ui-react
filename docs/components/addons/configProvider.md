@@ -11,7 +11,9 @@ order: 0
 
 ```jsx
 import React from 'react';
-import { ConfigProvider, Button } from 'fomantic-ui-react';
+import { Button } from 'fomantic-ui-react';
+import 'fomantic-ui-react/es/style/css';
+import 'fomantic-ui-react/es/button/style/css';
 
 export default () => <Button content="button" />;
 ```
