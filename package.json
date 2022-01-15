@@ -1,6 +1,6 @@
 {
   "name": "fomantic-ui-react",
-  "version": "0.0.1-alpha.5",
+  "version": "0.0.0",
   "description": "Fomantic-UI React -- A React Component Library.",
   "scripts": {
     "start": "dumi dev",
@@ -13,14 +13,21 @@
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
     "init": "node script/init-component",
+    "changelog": "node script/generate-changelog",
     "serve": "serve docs-dist"
   },
+  "main": "cjs/index.js",
   "module": "es/index.js",
   "typings": "es/index.d.ts",
   "files": [
+    "esm",
     "es",
     "es/index.d.ts",
+    "cjs",
     "lib",
+    "dist",
+    "css",
+    "less",
     "LICENSE",
     "README.md"
   ],
@@ -39,6 +46,7 @@
     "@babel/runtime": "^7.16.5",
     "@popperjs/core": "^2.11.2",
     "classnames": "^2.3.1",
+    "dayjs": "^1.10.7",
     "hoist-non-react-statics": "^3.3.2",
     "lodash": "^4.17.21",
     "rc-tween-one": "^3.0.3",
@@ -61,6 +69,7 @@
     "prettier": "^2.2.1",
     "react-adsense": "^0.1.0",
     "serve": "^13.0.2",
+    "standard-changelog": "^2.0.27",
     "yorkie": "^2.0.0"
   },
   "repository": {

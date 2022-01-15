@@ -1,7 +1,8 @@
-import _ConfigProvider from './ConfigProvider';
+import ConfigProvider from './ConfigProvider';
+import ConfigContext from './ConfigContext';
 
+export type { Config } from './ConfigContext';
 export * from './type';
 
-export const ConfigProvider = _ConfigProvider;
-
+export { ConfigContext, ConfigProvider };
 export default ConfigProvider;

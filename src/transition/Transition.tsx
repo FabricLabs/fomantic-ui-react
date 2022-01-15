@@ -1,11 +1,9 @@
-import { createElement, useEffect, useState } from 'react';
+import { createElement, forwardRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 import { TransitionProps } from './type';
-import TransitionGroup from './TransitionGroup';
-import forwardRefWithStatics from '../_util/forwardRefWithStatics';
 
-const Transition = forwardRefWithStatics<TransitionProps, HTMLDivElement>(
+const Transition = forwardRef<HTMLDivElement, TransitionProps>(
   (
     {
       as = 'div',
@@ -112,7 +110,6 @@ const Transition = forwardRefWithStatics<TransitionProps, HTMLDivElement>(
       children,
     );
   },
-  { Group: TransitionGroup },
 );
 
 Transition.displayName = 'Transition';

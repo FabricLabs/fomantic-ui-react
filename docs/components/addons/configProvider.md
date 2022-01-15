@@ -11,11 +11,15 @@ order: 0
 
 ```jsx
 import React from 'react';
-import { Button } from 'fomantic-ui-react';
-import 'fomantic-ui-react/es/style/css';
-import 'fomantic-ui-react/es/button/style/css';
+import { ConfigProvider, Button } from 'fomantic-ui-react';
+// import 'fomantic-ui-react/es/style/css';
+// import 'fomantic-ui-react/es/button/style/css'
 
-export default () => <Button content="button" />;
+export default () => (
+  <ConfigProvider>
+    <Button content="button" />
+  </ConfigProvider>
+);
 ```
 
 <API src="@/configProvider/ConfigProvider.tsx"></API>

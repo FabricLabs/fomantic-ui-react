@@ -71,3 +71,5 @@ export * from './accordion';
 export * from './popup';
 
 export * from './configProvider';
+
+export * from './calendar';

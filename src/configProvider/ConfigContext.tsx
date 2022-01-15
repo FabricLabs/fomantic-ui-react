@@ -1,14 +1,15 @@
 import { createContext } from 'react';
+import defaultLocale from '../locale/zh_CN';
 
 export interface Config {
   /**
-   * 样式文件类型
+   * 组件语言版本
    */
-  styleType: 'css' | 'less';
+  locale?: typeof defaultLocale;
 }
 
 export const defaultContext: Config = {
-  styleType: 'css',
+  locale: defaultLocale,
 };
 
 const ConfigContext = createContext<Config>(defaultContext);
