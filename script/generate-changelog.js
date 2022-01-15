@@ -42,6 +42,8 @@ function getLastChangeLogCommit() {
     encoding: 'utf-8',
   }).split('\n');
 
+  console.log(changeLogCommits);
+
   return changeLogCommits.find((cmt) => VERSION_REG.test(cmt)).slice(0, 8);
 }
 
