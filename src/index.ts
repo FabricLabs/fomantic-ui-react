@@ -73,3 +73,5 @@ export * from './popup';
 export * from './configProvider';
 
 export * from './calendar';
+
+export * from './select';
