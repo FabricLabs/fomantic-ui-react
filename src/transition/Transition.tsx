@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import { TransitionProps } from './type';
 
-const Transition = forwardRef<HTMLDivElement, TransitionProps>(
+const Transition = forwardRef<HTMLElement, TransitionProps>(
   (
     {
       as = 'div',
@@ -105,6 +105,7 @@ const Transition = forwardRef<HTMLDivElement, TransitionProps>(
         ref,
         className: classNames('transition', css, className),
         style: { ...style, ...props.style },
+        tabIndex: '-1',
         ..._.omit(props, 'style'),
       },
       children,

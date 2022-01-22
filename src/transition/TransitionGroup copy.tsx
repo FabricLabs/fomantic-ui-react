@@ -1,4 +1,4 @@
-import React, { Children, createElement, isValidElement, ReactNode, useEffect, useState } from 'react';
+import React, { Children, createElement, isValidElement, useEffect, useState } from 'react';
 import { TransitionGroupProps } from './type';
 import Transition from '.';
 import _ from 'lodash';
