@@ -44,6 +44,10 @@ export interface DropdownProps extends ModuleProps {
    */
   noResultsMessage?: FNode;
   /**
+   * 数据化配置选项内容
+   */
+  options?: Array<DropdownItemProps>;
+  /**
    * 点击时触发
    */
   onClick?: (e: MouseEvent<HTMLElement>) => void;
@@ -117,6 +121,10 @@ export interface DropdownItemProps extends ModuleProps {
    * 存储值
    */
   value?: string | boolean | number | Array<any> | { [key: string]: any };
+  /**
+   * 分割线
+   */
+  divider?: boolean;
   /**
    * 点击时触发
    */

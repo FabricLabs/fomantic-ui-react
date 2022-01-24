@@ -1,4 +1,5 @@
-import { ModuleProps, OptionData } from '../common';
+import { ModuleProps } from '../common';
+import type { DropdownItemProps } from '../dropdown/type';
 
 export interface SelectProps extends ModuleProps {
   /**
@@ -8,5 +9,13 @@ export interface SelectProps extends ModuleProps {
   /**
    * 下拉选项
    */
-  options?: Array<OptionData>;
+  options?: Array<DropdownItemProps>;
+  /**
+   * 字段名
+   */
+  name?: string;
+  /**
+   * 默认值
+   */
+  value?: string | number;
 }

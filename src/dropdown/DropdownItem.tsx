@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import _ from 'lodash';
 import React, { Children, createElement, isValidElement, useState } from 'react';
 import Icon from '../icon';
+import DropdownDivider from './DropdownDivider';
 import DropdownMenu from './DropdownMenu';
 import type { DropdownItemProps } from './type';
 
@@ -15,6 +16,7 @@ const DropdownItem = ({
   icon,
   value,
   unfilterable,
+  divider,
   children,
   ...props
 }: DropdownItemProps) => {
@@ -22,6 +24,10 @@ const DropdownItem = ({
 
   if (!as) {
     as = 'div';
+  }
+
+  if (divider) {
+    return <DropdownDivider as={as} className={className} />;
   }
 
   let content;

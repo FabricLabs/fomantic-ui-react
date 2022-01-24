@@ -36,6 +36,27 @@ export default () => (
 );
 ```
 
+```jsx
+import React from 'react';
+import { Dropdown } from 'fomantic-ui-react';
+
+const menus = [
+  { text: 'New' },
+  { text: 'Open...', description: 'ctrl + o' },
+  { text: 'Save as...', description: 'ctrl + s' },
+  { text: 'Rename', description: 'ctrl + r' },
+  { text: 'Make a copy' },
+  { text: 'Move to folder', icon: 'folder' },
+  { text: 'Move to trash', icon: 'trash', description: 'ctrl + x' },
+  { divider: true },
+  { text: 'Download As...' },
+  { text: 'Publish To Web' },
+  { text: 'E-mail Collaborators' },
+];
+
+export default () => <Dropdown text="File" options={menus} />;
+```
+
 ## 选择
 
 ```jsx

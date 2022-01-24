@@ -9,6 +9,7 @@ import React, {
   Children,
   cloneElement,
   ChangeEvent,
+  Key,
 } from 'react';
 import _ from 'lodash';
 import DropdownMenu from './DropdownMenu';
@@ -25,6 +26,7 @@ import { DropdownMenuProps } from '.';
 // TODO: 多选
 // TODO: 搜索下拉列表
 // TODO: 在菜单中搜索
+// TODO: options 中子菜单
 // ...
 
 const Dropdown = ({
@@ -40,6 +42,7 @@ const Dropdown = ({
   search,
   clearable,
   noResultsMessage = 'No results found.',
+  options = [],
   onClick,
   children,
   ...props
@@ -155,7 +158,72 @@ const Dropdown = ({
   let menu = <></>;
 
   if (isNil(children)) {
-    menu = <></>;
+    let itemChildren: Array<FNode> = [];
+    if (selection) {
+      let hasResults = false;
+
+      _.forEach(options, (item, i) => {
+        const handleItemClick = () => {
+          setInputValue(item.value);
+          setTextState(item.text);
+          setSelectedIndex(i);
+          setFiltered(false);
+        };
+        useEffect(() => {
+          if (inputValue === item.value) {
+            setSelectedIndex(i);
+            setTextState(item.text);
+          }
+        }, []);
+
+        const findValue = () => {
+          if (filtered || searchValue) {
+            if (typeof item.value === 'string' || typeof item.value === 'number') {
+              if (_.toLower(_.trim(item.value.toString())).includes(_.toLower(searchValue!)) !== false) {
+                hasResults = true;
+                return false;
+              }
+            }
+            if (_.toLower(_.trim(item.text || item.children?.toString())).includes(_.toLower(searchValue!)) !== false) {
+              hasResults = true;
+              return false;
+            }
+            return true;
+          } else {
+            return false;
+          }
+        };
+
+        if (item.unfilterable) {
+          hasResults = true;
+        }
+
+        itemChildren.push(
+          <DropdownItem
+            className={classNames({
+              filtered: item.unfilterable ? false : findValue(),
+            })}
+            key={i}
+            active={inputValue === item.value}
+            selected={selectedIndex === i}
+            value={item.value}
+            text={item.text}
+            onClick={handleItemClick}
+          />,
+        );
+      });
+
+      menu = (
+        <DropdownMenu open={visible} onShow={scrollSelectedItemIntoView} onHide={() => setSearchValue(undefined)}>
+          {itemChildren}
+        </DropdownMenu>
+      );
+    } else {
+      _.forEach(options, (item, i) => {
+        itemChildren.push(<DropdownItem key={i} {...item} />);
+      });
+      menu = <DropdownMenu open={visible}>{itemChildren}</DropdownMenu>;
+    }
   } else {
     const menuChild = Children.only(children);
 
