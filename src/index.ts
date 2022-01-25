@@ -77,3 +77,5 @@ export * from './calendar';
 export * from './select';
 
 export * from './dropdown';
+
+export * from './checkbox';
