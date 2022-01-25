@@ -79,3 +79,5 @@ export * from './select';
 export * from './dropdown';
 
 export * from './checkbox';
+
+export * from './embed';
