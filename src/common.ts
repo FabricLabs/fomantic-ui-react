@@ -46,6 +46,7 @@ export interface CommonProps extends StyledProps {
    */
   as?: ElementType;
   children?: FNode;
+  [key: string]: any;
 }
 
 export interface ElementProps extends CommonProps {

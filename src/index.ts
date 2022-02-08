@@ -81,3 +81,5 @@ export * from './dropdown';
 export * from './checkbox';
 
 export * from './embed';
+
+export * from './modal';

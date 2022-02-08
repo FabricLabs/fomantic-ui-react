@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import React, { createElement, isValidElement, useState } from 'react';
+import React, { createElement, isValidElement, MouseEvent, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
-import Transition from '../transition';
 import { PopupProps } from './type';
+import Transition from '../transition';
 
 const Popup = ({
   as = 'div',
@@ -43,7 +43,7 @@ const Popup = ({
     let triggerProps: { [key: string]: any } = {};
 
     if (on === 'click') {
-      triggerProps.onClick = (e: any) => {
+      triggerProps.onClick = (e: MouseEvent<HTMLElement>) => {
         if (toggle) {
           setTimeout(
             () => {
@@ -65,7 +65,7 @@ const Popup = ({
     }
 
     if (on === 'hover') {
-      triggerProps.onMouseEnter = (e: any) => {
+      triggerProps.onMouseEnter = (e: MouseEvent<HTMLElement>) => {
         setToggle(true);
         setTimeout(
           () => {
@@ -75,7 +75,7 @@ const Popup = ({
         );
         trigger.props.onMouseEnter && trigger.props.onMouseEnter(e);
       };
-      triggerProps.onMouseLeave = (e: any) => {
+      triggerProps.onMouseLeave = (e: MouseEvent<HTMLElement>) => {
         setTimeout(
           () => {
             setVisible(false);
@@ -87,7 +87,7 @@ const Popup = ({
     }
 
     if (on === 'focus') {
-      triggerProps.onFocus = (e: any) => {
+      triggerProps.onFocus = (e: MouseEvent<HTMLElement>) => {
         setToggle(true);
         setTimeout(
           () => {
@@ -97,7 +97,7 @@ const Popup = ({
         );
         trigger.props.onFocus && trigger.props.onFocus(e);
       };
-      triggerProps.onBlur = (e: any) => {
+      triggerProps.onBlur = (e: MouseEvent<HTMLElement>) => {
         setTimeout(
           () => {
             setVisible(false);

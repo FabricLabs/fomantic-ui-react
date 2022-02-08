@@ -1,25 +1,20 @@
 import React from 'react';
+import classNames from 'classnames';
+import Transition from '../transition';
 import DimmerDimmable from './DimmerDimmable';
 import { DimmerProps } from './type';
 
 const Dimmer = ({ as = 'div', className, active, inverted, content, children, ...props }: DimmerProps) => {
-  const classNames = ['ui', 'dimmer'];
-
-  if (active) {
-    classNames.push('active');
-  } else {
-    classNames.push('hidden');
-  }
-
-  if (inverted) {
-    classNames.push('inverted');
-  }
-
-  if (className) {
-    classNames.push(className);
-  }
-
-  return React.createElement(as, { className: classNames.join(' '), ...props }, children || content);
+  return (
+    <Transition
+      as={as}
+      className={classNames('ui', 'dimmer', { active, inverted }, className)}
+      visible={active}
+      {...props}
+    >
+      {children || content}
+    </Transition>
+  );
 };
 
 Dimmer.displayName = 'Dimmer';
