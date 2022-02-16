@@ -50,7 +50,7 @@ export default () => {
     <>
       <Transition
         as={Image}
-        animation="horizontal flip"
+        animation="slide down"
         duration={{ hide: 600, show: 3000 }}
         visible={visible}
         src="/images/1.png"
