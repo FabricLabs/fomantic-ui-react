@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useIsomorphicLayoutEffect } from 'react-use';
 
 const useRaf = (ms: number = 1e12, delay: number = 0, e?: { start?: Function; end?: Function }): [number, Function] => {
