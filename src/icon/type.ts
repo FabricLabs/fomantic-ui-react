@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 export interface IconProps {
   /**
    * 标签名称
@@ -74,5 +76,16 @@ export interface IconProps {
     | 'brown'
     | 'grey'
     | 'black';
-  onClick?: Function;
+  /**
+   * 点击时触发
+   */
+  onClick?: MouseEventHandler<HTMLElement>;
+  /**
+   * 鼠标指针移动到元素上时触发
+   */
+  onMouseEnter?: MouseEventHandler<HTMLElement>;
+  /**
+   * 鼠标指针移出元素时触发
+   */
+  onMouseLeave?: MouseEventHandler<HTMLElement>;
 }

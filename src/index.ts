@@ -87,3 +87,5 @@ export * from './modal';
 export * from './nag';
 
 export * from './progress';
+
+export * from './rating';
