@@ -1,8 +1,14 @@
 import { ModuleProps } from '../common';
 
-interface shape {
-  hide: number;
+export interface shape {
+  /**
+   * 显示持续时间；单位：ms
+   */
   show: number;
+  /**
+   * 隐藏持续时间；单位：ms
+   */
+  hide: number;
 }
 
 export type animation =
@@ -39,7 +45,13 @@ export type animation =
   | 'glow';
 
 export interface animationShape {
+  /**
+   * 显示动画
+   */
   show: animation;
+  /**
+   * 隐藏动画
+   */
   hide: animation;
 }
 

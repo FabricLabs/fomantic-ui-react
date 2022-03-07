@@ -7,6 +7,7 @@ import SlugList from './components/SlugList';
 import SearchBar from './components/SearchBar';
 import Dark from './components/Dark';
 import './style/layout.less';
+import '../../src/_css/semantic.css';
 
 const Hero = (hero) => (
   <>

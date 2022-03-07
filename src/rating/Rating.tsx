@@ -13,7 +13,6 @@ const Rating = ({
   color = 'black',
   disabled,
   size,
-  children,
   ...props
 }: RatingProps) => {
   const [selected, setSelected] = useState(false);

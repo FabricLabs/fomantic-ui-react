@@ -89,3 +89,5 @@ export * from './nag';
 export * from './progress';
 
 export * from './rating';
+
+export * from './search';

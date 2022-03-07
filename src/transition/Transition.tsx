@@ -1,117 +1,115 @@
-import { createElement, forwardRef, useEffect, useState } from 'react';
+import { createElement, CSSProperties, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 import { TransitionProps } from './type';
 
-const Transition = forwardRef<HTMLElement, TransitionProps>(
-  (
-    {
-      as = 'div',
-      visible = true,
-      animation = 'fade',
-      duration = 500,
-      className,
-      children,
-      onShow,
-      onHide,
-      onStart,
-      onComplete,
-      ...props
-    },
-    ref,
-  ) => {
-    const [start, setStart] = useState(true);
-    const [update, setUpdate] = useState(false);
-    const [css, setCss] = useState('');
-    const [style, setStyle] = useState({});
+const Transition = ({
+  as = 'div',
+  visible = true,
+  animation = 'fade',
+  duration = 500,
+  className,
+  children,
+  onShow,
+  onHide,
+  onStart,
+  onComplete,
+  ...props
+}: TransitionProps) => {
+  const [start, setStart] = useState(true);
+  const [update, setUpdate] = useState(false);
+  const [css, setCss] = useState('');
+  const [style, setStyle] = useState<CSSProperties>({});
+  const [animating, setAnimating] = useState(false);
 
-    const handleStart = () => {
-      setCss(visible ? 'visible' : 'hidden');
-    };
+  const handleStart = () => {
+    setCss(visible ? 'visible' : 'hidden');
+  };
 
-    useEffect(() => {
-      handleStart();
-      setStart(false);
-    }, []);
+  useEffect(() => {
+    handleStart();
+    setStart(false);
+  }, []);
 
-    useEffect(() => {
-      if (!start) {
-        setUpdate(true);
-        if (typeof onStart === 'function') {
-          onStart();
+  useEffect(() => {
+    if (!start) {
+      setUpdate(true);
+      setAnimating(true);
+      if (typeof onStart === 'function') {
+        onStart();
+      }
+      if (typeof duration === 'number') {
+        if (typeof animation === 'string') {
+          setCss(`${animation} ${visible ? 'in' : 'out'}`);
+        } else {
+          setCss(visible ? `${animation.show} in` : `${animation.hide} out`);
         }
-        if (typeof duration === 'number') {
-          if (typeof animation === 'string') {
-            setCss(`${animation} ${visible ? 'in' : 'out'}`);
+        setStyle({ animationDuration: `${duration}ms`, display: 'block' });
+        setTimeout(() => {
+          setUpdate(false);
+          setAnimating(false);
+          if (visible) {
+            if (typeof onShow === 'function') {
+              onShow();
+            }
           } else {
-            setCss(visible ? `${animation.show} in` : `${animation.hide} out`);
+            if (typeof onHide === 'function') {
+              onHide();
+            }
           }
-          setStyle({ animationDuration: `${duration}ms` });
+          if (typeof onComplete === 'function') {
+            onComplete();
+          }
+        }, duration);
+      } else {
+        if (visible) {
+          setCss(`${typeof animation === 'string' ? animation : animation.show} in`);
+          setStyle({ animationDuration: `${duration.show}ms`, display: 'block' });
           setTimeout(() => {
             setUpdate(false);
-            if (visible) {
-              if (typeof onShow === 'function') {
-                onShow();
-              }
-            } else {
-              if (typeof onHide === 'function') {
-                onHide();
-              }
+            setAnimating(false);
+            if (typeof onShow === 'function') {
+              onShow();
             }
             if (typeof onComplete === 'function') {
               onComplete();
             }
-          }, duration);
+          }, duration.show);
         } else {
-          if (visible) {
-            setCss(`${typeof animation === 'string' ? animation : animation.show} in`);
-            setStyle({ animationDuration: `${duration.show}ms` });
-            setTimeout(() => {
-              setUpdate(false);
-              if (typeof onShow === 'function') {
-                onShow();
-              }
-              if (typeof onComplete === 'function') {
-                onComplete();
-              }
-            }, duration.show);
-          } else {
-            setCss(`${typeof animation === 'string' ? animation : animation.hide} out`);
-            setStyle({ animationDuration: `${duration.hide}ms` });
-            setTimeout(() => {
-              setUpdate(false);
-              if (typeof onHide === 'function') {
-                onHide();
-              }
-              if (typeof onComplete === 'function') {
-                onComplete();
-              }
-            }, duration.hide);
-          }
+          setCss(`${typeof animation === 'string' ? animation : animation.hide} out`);
+          setStyle({ animationDuration: `${duration.hide}ms`, display: 'block' });
+          setTimeout(() => {
+            setUpdate(false);
+            setAnimating(false);
+            if (typeof onHide === 'function') {
+              onHide();
+            }
+            if (typeof onComplete === 'function') {
+              onComplete();
+            }
+          }, duration.hide);
         }
       }
-    }, [visible]);
+    }
+  }, [visible]);
 
-    useEffect(() => {
-      if (!update) {
-        handleStart();
-        setStyle({});
-      }
-    }, [update]);
+  useEffect(() => {
+    if (!update) {
+      handleStart();
+      setStyle({});
+    }
+  }, [update]);
 
-    return createElement(
-      as,
-      {
-        ref,
-        className: classNames('transition', css, className),
-        style: { ...style, ...props.style },
-        tabIndex: '-1',
-        ..._.omit(props, 'style'),
-      },
-      children,
-    );
-  },
-);
+  return createElement(
+    as,
+    {
+      className: classNames('transition', { animating }, css, className),
+      style: { ...style, ...props.style },
+      ..._.omit(props, 'style'),
+    },
+    children,
+  );
+};
 
 Transition.displayName = 'Transition';
 

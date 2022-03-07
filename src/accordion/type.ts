@@ -13,7 +13,6 @@ export interface AccordionTitleProps extends ElementProps {
   index?: string | number;
   /**
    * 点击事件
-   * @param e hehe
    */
   onClick?: Function;
 }

@@ -109,6 +109,18 @@ export default () => {
 
 <API src="@/transition/Transition.tsx" hideTitle></API>
 
-### **TransitionGroup**<Badge>API</Badge>
+### **shape**<Badge>Props</Badge>
 
-<API src="@/transition/TransitionGroup.tsx" hideTitle></API>
+<API src="@/transition/Shape.tsx" hideTitle></API>
+
+### **animationShape**<Badge>Props</Badge>
+
+<API src="@/transition/Animation.tsx" hideTitle></API>
+
+### **animation**<Badge>Type</Badge>
+
+`'browse' | 'browse right' | 'drop' | 'fade' | 'fade up' | 'fade down' | 'fade left' | 'fade right' | 'fly up' | 'fly down' | 'fly left' | 'fly right' | 'horizontal flip' | 'vertical flip' | 'scale' | 'slide up' | 'slide down' | 'slide left' | 'slide right' | 'swing up' | 'swing down' | 'swing left' | 'swing right' | 'zoom' | 'jiggle' | 'flash' | 'shake' | 'pulse' | 'tada' | 'bounce' | 'glow'`
+
+<!-- ### **TransitionGroup**<Badge>API</Badge>
+
+<API src="@/transition/TransitionGroup.tsx" hideTitle></API> -->
