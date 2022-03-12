@@ -1,6 +1,6 @@
 import { ModuleProps } from '../common';
 
-export interface shape {
+export interface timeShape {
   /**
    * 显示持续时间；单位：ms
    */
@@ -63,7 +63,7 @@ export interface TransitionProps extends ModuleProps {
   /**
    * 持续时间；单位：ms
    */
-  duration?: number | shape;
+  duration?: number | timeShape;
   /**
    * 动画
    */
@@ -94,5 +94,5 @@ export interface TransitionGroupProps extends ModuleProps {
   /**
    * 持续时间；单位：ms
    */
-  duration?: number | shape;
+  duration?: number | timeShape;
 }

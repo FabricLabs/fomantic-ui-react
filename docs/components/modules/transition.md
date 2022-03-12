@@ -111,11 +111,11 @@ export default () => {
 
 ### **shape**<Badge>Props</Badge>
 
-<API src="@/transition/Shape.tsx" hideTitle></API>
+<API src="@/transition/TransitionShape.tsx" hideTitle></API>
 
 ### **animationShape**<Badge>Props</Badge>
 
-<API src="@/transition/Animation.tsx" hideTitle></API>
+<API src="@/transition/TransitionAnimation.tsx" hideTitle></API>
 
 ### **animation**<Badge>Type</Badge>
 

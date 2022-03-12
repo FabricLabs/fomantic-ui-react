@@ -1,4 +1,4 @@
-import { ChangeEventHandler, MouseEventHandler, SyntheticEvent } from 'react';
+import { ChangeEventHandler, SyntheticEvent } from 'react';
 import { FNode, ModuleProps } from '../common';
 
 export interface LoadingProps {

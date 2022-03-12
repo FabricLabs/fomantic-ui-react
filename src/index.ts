@@ -91,3 +91,5 @@ export * from './progress';
 export * from './rating';
 
 export * from './search';
+
+export * from './shape';

@@ -1,7 +1,7 @@
 import { animation, animationShape } from '../transition/type';
 import { ElementProps, FNode } from '../common';
 
-interface shape {
+export interface timeShape {
   show: number;
   hide: number;
 }
@@ -18,7 +18,7 @@ export interface PopupProps extends ElementProps {
   /**
    * 过渡持续时间 (ms)
    */
-  duration?: number | shape;
+  duration?: number | timeShape;
   /**
    * 动画样式
    */
@@ -26,7 +26,7 @@ export interface PopupProps extends ElementProps {
   /**
    * 延迟执行
    */
-  delay?: number | shape;
+  delay?: number | timeShape;
   /**
    * 位置
    */
