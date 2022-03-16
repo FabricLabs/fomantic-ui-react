@@ -18,7 +18,13 @@ export type FormSubmitEvent = FormEvent<HTMLFormElement>;
 export type Styles = CSSProperties;
 
 export interface StyledProps {
+  /**
+   * HTML 标签 class 属性值
+   */
   className?: string;
+  /**
+   * HTML 标签 style 属性值
+   */
   style?: CSSProperties;
 }
 

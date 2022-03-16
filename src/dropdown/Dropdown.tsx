@@ -9,7 +9,6 @@ import React, {
   Children,
   cloneElement,
   ChangeEvent,
-  Key,
 } from 'react';
 import _ from 'lodash';
 import DropdownMenu from './DropdownMenu';

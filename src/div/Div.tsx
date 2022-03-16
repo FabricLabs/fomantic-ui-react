@@ -2,11 +2,8 @@ import classNames from 'classnames';
 import { createElement, forwardRef } from 'react';
 import { DivProps } from './type';
 
-const Div = forwardRef(
-  (
-    { as = 'div', floated, header, meta, description, extra, className, content, children, ...props }: DivProps,
-    ref: any,
-  ) => {
+const Div = forwardRef<HTMLDivElement, DivProps>(
+  ({ as = 'div', floated, header, meta, description, extra, className, content, children, ...props }, ref) => {
     if (!as) {
       as = 'div';
     }
