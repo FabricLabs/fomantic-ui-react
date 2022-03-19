@@ -1,19 +1,15 @@
 import { createElement } from 'react';
+import classNames from 'classnames';
 import MenuItem from './MenuItem';
 import { MenuProps } from './type';
+import { uniq } from '../_util/classNamesUniq';
 
 const Menu = ({ as = 'div', className, text, children, ...props }: MenuProps) => {
-  const classNames = ['ui', 'menu'];
-
-  if (text) {
-    classNames.push('text');
+  if (!as) {
+    as = 'div';
   }
 
-  if (className) {
-    classNames.push(className);
-  }
-
-  return createElement(as, { className: classNames.join(' '), ...props }, children);
+  return createElement(as, { className: uniq(classNames('ui', 'menu', { text }, className)), ...props }, children);
 };
 
 Menu.displayName = 'Menu';

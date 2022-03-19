@@ -93,3 +93,5 @@ export * from './rating';
 export * from './search';
 
 export * from './shape';
+
+export * from './sidebar';
