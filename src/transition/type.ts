@@ -1,15 +1,4 @@
-import { ModuleProps } from '../common';
-
-export interface timeShape {
-  /**
-   * 显示持续时间；单位：ms
-   */
-  show: number;
-  /**
-   * 隐藏持续时间；单位：ms
-   */
-  hide: number;
-}
+import { ModuleProps, timeShape } from '../common';
 
 export type animation =
   | 'browse'

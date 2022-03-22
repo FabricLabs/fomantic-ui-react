@@ -1,4 +1,4 @@
-import { timeShape } from './type';
+import { timeShape } from '../common';
 
 const TransitionShape = (props: timeShape) => {};
 

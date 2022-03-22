@@ -95,3 +95,5 @@ export * from './search';
 export * from './shape';
 
 export * from './sidebar';
+
+export * from './slider';

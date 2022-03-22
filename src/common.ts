@@ -46,6 +46,17 @@ export interface KeysType {
   label?: string;
 }
 
+export interface timeShape {
+  /**
+   * 显示持续时间；单位：ms
+   */
+  show: number;
+  /**
+   * 隐藏持续时间；单位：ms
+   */
+  hide: number;
+}
+
 export interface CommonProps extends StyledProps {
   /**
    * 标签或组件名称

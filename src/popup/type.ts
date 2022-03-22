@@ -1,10 +1,5 @@
 import { animation, animationShape } from '../transition/type';
-import { ElementProps, FNode } from '../common';
-
-export interface timeShape {
-  show: number;
-  hide: number;
-}
+import { ElementProps, FNode, timeShape } from '../common';
 
 export interface PopupProps extends ElementProps {
   /**

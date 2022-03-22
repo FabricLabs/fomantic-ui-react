@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import SidebarPushable from './SidebarPushable';
 import SidebarPusher from './SidebarPusher';
 import { SidebarProps } from './type';
-import { uniq } from '../_util/classNamesUniq';
+import uniq from '../_util/classNamesUniq';
 
 const Sidebar = ({
   as = 'div',
