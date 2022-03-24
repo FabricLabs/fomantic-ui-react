@@ -97,3 +97,5 @@ export * from './shape';
 export * from './sidebar';
 
 export * from './slider';
+
+export * from './sticky';
