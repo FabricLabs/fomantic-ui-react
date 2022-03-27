@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import { SegmentProps } from './type';
 import SegmentInline from './SegmentInline';
 import SegmentGroup from './SegmentGroup';
@@ -53,7 +53,7 @@ const Segment = ({
     as = 'div';
   }
 
-  return React.createElement(as, { className: classNames.join(' '), ...props }, children || content);
+  return createElement(as, { className: classNames.join(' '), ...props }, children || content);
 };
 
 Segment.displayName = 'Segment';

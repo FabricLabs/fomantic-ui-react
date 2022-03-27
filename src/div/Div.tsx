@@ -1,14 +1,25 @@
-import { createElement, forwardRef, ForwardRefRenderFunction } from 'react';
+import { createElement, forwardRef, ForwardRefRenderFunction, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { DivProps } from './type';
 
-const Div: ForwardRefRenderFunction<HTMLDivElement, DivProps> = (
+export interface FDivProps extends DivProps, HTMLAttributes<HTMLElement> {}
+
+const Div: ForwardRefRenderFunction<HTMLElement, FDivProps> = (
   { as = 'div', floated, header, meta, description, extra, className, content, children, ...props },
   ref,
 ) => {
   if (!as) {
     as = 'div';
   }
+
+  const contents = children || (typeof content !== 'boolean' ? content : undefined);
+
+  /*   if (!isNil(contents) && typeof contents !== 'string' && Children.count(contents) === 1) {
+    const child = Children.only(contents);
+    if (isValidElement(child)) {
+      return <Fragment ref={ref}>{child}</Fragment>;
+    }
+  } */
 
   return createElement(
     as,
@@ -29,7 +40,7 @@ const Div: ForwardRefRenderFunction<HTMLDivElement, DivProps> = (
         ) || undefined,
       ...props,
     },
-    children || (typeof content !== 'boolean' ? content : undefined),
+    contents,
   );
 };
 
