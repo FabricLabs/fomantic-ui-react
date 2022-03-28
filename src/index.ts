@@ -99,3 +99,5 @@ export * from './sidebar';
 export * from './slider';
 
 export * from './sticky';
+
+export * from './tab';
