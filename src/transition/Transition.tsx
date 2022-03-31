@@ -32,6 +32,7 @@ const Transition = ({
   }, []);
 
   useEffect(() => {
+    let timer: NodeJS.Timeout;
     if (!start) {
       setUpdate(true);
       setAnimating(true);
@@ -45,7 +46,8 @@ const Transition = ({
           setCss(visible ? `${animation.show} in` : `${animation.hide} out`);
         }
         setStyle({ animationDuration: `${duration}ms`, display: 'block' });
-        setTimeout(() => {
+        timer = setTimeout(() => {
+          clearTimeout(timer);
           setUpdate(false);
           setAnimating(false);
           if (visible) {
@@ -65,7 +67,8 @@ const Transition = ({
         if (visible) {
           setCss(`${typeof animation === 'string' ? animation : animation.show} in`);
           setStyle({ animationDuration: `${duration.show}ms`, display: 'block' });
-          setTimeout(() => {
+          timer = setTimeout(() => {
+            clearTimeout(timer);
             setUpdate(false);
             setAnimating(false);
             if (typeof onShow === 'function') {
@@ -78,7 +81,8 @@ const Transition = ({
         } else {
           setCss(`${typeof animation === 'string' ? animation : animation.hide} out`);
           setStyle({ animationDuration: `${duration.hide}ms`, display: 'block' });
-          setTimeout(() => {
+          timer = setTimeout(() => {
+            clearTimeout(timer);
             setUpdate(false);
             setAnimating(false);
             if (typeof onHide === 'function') {
@@ -91,6 +95,9 @@ const Transition = ({
         }
       }
     }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
   }, [visible]);
 
   useEffect(() => {

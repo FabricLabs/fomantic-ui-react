@@ -101,3 +101,5 @@ export * from './slider';
 export * from './sticky';
 
 export * from './tab';
+
+export * from './toast';

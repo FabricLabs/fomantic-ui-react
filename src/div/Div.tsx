@@ -4,7 +4,7 @@ import { DivProps } from './type';
 
 export interface FDivProps extends DivProps, HTMLAttributes<HTMLElement> {}
 
-const Div: ForwardRefRenderFunction<HTMLElement, FDivProps> = (
+const Div: ForwardRefRenderFunction<HTMLElement, FDivProps & { [key: string]: any }> = (
   { as = 'div', floated, header, meta, description, extra, className, content, children, ...props },
   ref,
 ) => {
