@@ -39,6 +39,10 @@ export interface SearchResultProps extends ModuleProps {
    */
   title: string;
   /**
+   * 描述
+   */
+  description?: string;
+  /**
    * 激活
    */
   active?: boolean;
@@ -58,6 +62,10 @@ export interface SearchResultProps extends ModuleProps {
    * 唯一标识符
    */
   id?: number | string;
+  /**
+   * 子组件 key
+   */
+  childkey?: number | string;
   /**
    * 渲染结果内容
    */
@@ -114,7 +122,7 @@ export interface SearchProps extends ModuleProps {
   /**
    * 结果集
    */
-  results?: SearchResultProps[] | SearchCategoryProps;
+  results?: SearchResultProps[];
   /**
    * 没有结果时显示的消息
    */

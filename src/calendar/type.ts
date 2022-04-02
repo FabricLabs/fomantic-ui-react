@@ -41,6 +41,10 @@ export interface CalendarProps extends StyledProps {
   onMonthChange?: (options: { month: string; year: string }) => void;
 }
 
+export interface RadioGroupProps {}
+
+export interface SelectProps {}
+
 export interface CalendarController {
   /**
    * “今天(本月)”按钮控制器

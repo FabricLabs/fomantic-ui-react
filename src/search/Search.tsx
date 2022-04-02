@@ -1,4 +1,4 @@
-import React, { ChangeEvent, createElement, CSSProperties, SyntheticEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, createElement, SyntheticEvent, useState } from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 import { SearchProps, SearchResultProps } from './type';
@@ -108,14 +108,12 @@ const Search = ({
     onChange: handleSearchChange,
   });
 
-  const renderNoResults = () => {
-    return (
-      <div className="message empty">
-        <div className="header">{noResultsMessage}</div>
-        {noResultsDescription && <div className="description">{noResultsDescription}</div>}
-      </div>
-    );
-  };
+  const renderNoResults = (
+    <div className="message empty">
+      <div className="header">{noResultsMessage}</div>
+      {noResultsDescription && <div className="description">{noResultsDescription}</div>}
+    </div>
+  );
 
   const renderResult = (
     { childkey, ...result }: SearchResultProps,
@@ -135,16 +133,14 @@ const Search = ({
     );
   };
 
-  const renderResults = () => {
-    return _.map(results, renderResult);
-  };
+  const renderResults = _.map(results, renderResult);
 
   const renderMenuContent = () => {
     if (_.isEmpty(results)) {
-      return showNoResults ? renderNoResults() : null;
+      return showNoResults ? renderNoResults : null;
     }
 
-    return renderResults();
+    return renderResults;
   };
 
   const renderResultsMenu = () => {
