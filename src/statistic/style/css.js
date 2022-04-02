@@ -1,1 +1,1 @@
-import '../../_css/components/statistic.css';
+import './index.css';

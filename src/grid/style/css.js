@@ -1,1 +1,1 @@
-import '../../_css/components/grid.css';
+import './index.css';

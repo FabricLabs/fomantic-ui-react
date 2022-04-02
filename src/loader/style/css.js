@@ -1,1 +1,1 @@
-import '../../_css/components/loader.css';
+import './index.css';

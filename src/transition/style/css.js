@@ -1,1 +1,1 @@
-import '../../_css/components/transition.css';
+import './index.css';

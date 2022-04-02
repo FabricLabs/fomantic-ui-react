@@ -1,1 +1,1 @@
-import '../../_css/components/divider.css';
+import './index.css';

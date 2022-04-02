@@ -1,1 +1,1 @@
-import '../../_css/components/embed.min.css';
+import './index.css';

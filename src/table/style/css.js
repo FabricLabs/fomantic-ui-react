@@ -1,1 +1,1 @@
-import '../../_css/components/table.css';
+import './index.css';

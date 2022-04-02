@@ -1,1 +1,1 @@
-import '../../_css/components/text.css';
+import './index.css';

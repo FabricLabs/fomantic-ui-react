@@ -1,1 +1,1 @@
-import '../../_css/components/accordion.css';
+import './index.css';

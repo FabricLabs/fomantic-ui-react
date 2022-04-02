@@ -1,1 +1,1 @@
-import '../../_css/components/rail.css';
+import './index.css';

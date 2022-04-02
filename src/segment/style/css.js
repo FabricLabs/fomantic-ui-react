@@ -1,1 +1,1 @@
-import '../../_css/components/segment.css';
+import './index.css';

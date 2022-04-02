@@ -1,1 +1,1 @@
-import '../../_css/components/flag.css';
+import './index.css';

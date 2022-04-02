@@ -1,1 +1,1 @@
-import '../../_css/components/step.css';
+import './index.css';

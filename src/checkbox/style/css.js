@@ -1,1 +1,1 @@
-import '../../_css/components/checkbox.css';
+import './index.css';

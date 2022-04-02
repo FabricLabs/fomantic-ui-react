@@ -1,1 +1,1 @@
-import '../../_css/components/form.css';
+import './index.css';

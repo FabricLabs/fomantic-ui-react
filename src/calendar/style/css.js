@@ -1,1 +1,1 @@
-import '../../_css/components/calendar.css';
+import './index.css';

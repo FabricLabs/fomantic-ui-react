@@ -1,1 +1,2 @@
-import '../../_css/components/dimmer.css';
+import './index.css';
+import './style.css';

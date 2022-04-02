@@ -1,1 +1,1 @@
-import '../../_css/components/card.css';
+import './index.css';

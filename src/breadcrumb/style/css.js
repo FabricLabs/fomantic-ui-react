@@ -1,1 +1,1 @@
-import '../../_css/components/breadcrumb.css';
+import './css.js';

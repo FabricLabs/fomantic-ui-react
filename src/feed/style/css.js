@@ -1,1 +1,1 @@
-import '../../_css/components/feed.css';
+import './index.css';

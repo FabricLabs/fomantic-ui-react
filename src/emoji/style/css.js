@@ -1,1 +1,1 @@
-import '../../_css/components/emoji.css';
+import './index.css';

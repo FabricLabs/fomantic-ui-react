@@ -1,1 +1,1 @@
-import '../../_css/components/label.css';
+import './index.css';

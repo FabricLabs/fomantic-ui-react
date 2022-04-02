@@ -1,1 +1,1 @@
-import '../../_css/components/nag.min.css';
+import './index.css';

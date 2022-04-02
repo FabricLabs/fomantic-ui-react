@@ -1,1 +1,1 @@
-import '../../_css/components/image.css';
+import './index.css';

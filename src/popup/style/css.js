@@ -1,1 +1,1 @@
-import '../../_css/components/popup.css';
+import './index.css';

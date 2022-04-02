@@ -1,1 +1,1 @@
-import '../../_css/components/comment.css';
+import './index.css';

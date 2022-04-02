@@ -1,1 +1,1 @@
-import '../../_css/components/message.css';
+import './index.css';

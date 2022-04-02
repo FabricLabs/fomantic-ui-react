@@ -1,1 +1,1 @@
-import '../../_css/components/reveal.css';
+import './index.css';

@@ -1,1 +1,1 @@
-import '../../_css/components/placeholder.css';
+import './index.css';
