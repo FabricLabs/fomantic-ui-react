@@ -1,7 +1,7 @@
+import * as _ from 'lodash';
 import React, { createElement } from 'react';
-import _ from 'lodash';
-import { ImageProps } from './type';
 import ImageGroup from './ImageGroup';
+import { ImageProps } from './type';
 
 const Image = ({
   as = 'img',
