@@ -1,3 +1,20 @@
+.github/
+
+# editor configs
+.idea/
+.vscode/
+
+coverage/
+
+dist/
+docs/src/componentInfo
+docs/src/componentMenu.json
+docs/src/exampleSources.json
+docs/src/exampleMenus
+docs/dist/
+
+package.json
+tmp/
 **/*.svg
 **/*.ejs
 **/*.html
